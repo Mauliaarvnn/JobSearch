@@ -1,0 +1,57 @@
+body {
+    font-family: poppins;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to bottom right, #022241, #314B64);
+}
+
+.card-login {
+    margin-top: 50px;
+    border-radius: 10px;
+    padding: 50px;
+    background-color: #FFFFFF;
+}
+
+.comlog {
+    text-align: center;
+}
+
+.strAtas {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.str1 {
+    margin: 0;
+    color: rgb(0, 0, 82);
+}
+
+.str2 {
+    margin: 0;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+.CheckBox {
+    margin: 10px 0px;
+    justify-content: left;
+}
+
+button {
+    color: rgb(0, 0, 82);
+    background-color: aqua;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bolder;
+}
+
+.str3 {
+    margin-top: 20px;
+}
+
+.str3 p {
+    margin: 6px 0; 
+}
