@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LokerIn - Beranda</title>
+  <link rel="stylesheet" href="stylehp.css" />
+
+  <style>
+    /* --- Tambahan CSS Supaya Menu & Share Jalan --- */
+
+    .job-header {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .job-actions-top {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      display: flex;
+      gap: 12px;
+      font-size: 20px;
+      cursor: pointer;
+      color: #555;
+    }
+
+    .job-actions-top span:hover {
+      color: #000;
+    }
+
+    /* Dropdown menu */
+    .dropdown-menu {
+      position: absolute;
+      top: 35px;
+      right: 0;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      width: 160px;
+      display: none;
+      flex-direction: column;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      animation: fadeIn .2s ease;
+      z-index: 10;
+    }
+
+    .dropdown-menu p {
+      padding: 10px 14px;
+      margin: 0;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .dropdown-menu p:hover {
+      background: #f3f3f3;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="logo">Loker<span class="in">In<span></div>
+    <nav>
+      <a href="#" class="active">Beranda</a>
+      <a href="#">Notifikasi</a>
+      <a href="#">Profil</a>
+    </nav>
+  </header>
+
+  <section class="search-bar">
+    <input type="text" placeholder="Cari posisi, perusahaan, atau kata kunci..." />
+    <button>Cari</button>
+  </section>
+
+  <section class="list-section">
+    <h2>5 Lowongan Ditemukan</h2>
+
+    <!-- ===================== CARD 1 ===================== -->
+    <div class="job-card">
+      <div class="job-header">
+        <div class="job-logo"></div>
+        <div>
+          <h3>Frontend Developer</h3>
+          <p>Tech Innovate</p>
+        </div>
+
+        <!-- Share + Menu -->
+        <div class="job-actions-top">
+          <span class="menu-btn">⋮</span>
+
+          <div class="dropdown-menu">
+            <p>Simpan Lowongan</p>
+            <p>Bagikan</p>
+            <p>Tidak Tertarik</p>
+            <p>Laporkan</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="job-info">
+        <span>Jakarta</span>
+        <span>Purnawaktu</span>
+        <span>Rp 8–12 juta</span>
+        <span>2 hari lalu</span>
+      </div>
+
+      <p class="job-desc">Kami mencari Frontend Developer yang berpengalaman dengan React dan TypeScript untuk bergabung dengan tim kami.</p>
+
+      <div class="job-actions">
+        <button class="btn-primary">Lamar Sekarang</button>
+        <button class="btn-outline">Lihat Detail</button>
+      </div>
+    </div>
+
+    <!-- ===================== CARD 2 ===================== -->
+    <div class="job-card">
+      <div class="job-header">
+        <div class="job-logo"></div>
+
+        <div>
+          <h3>Backend Engineer</h3>
+          <p>DataWorks Studio</p>
+        </div>
+
+        <!-- Share + Menu -->
+        <div class="job-actions-top">
+          <span class="menu-btn">⋮</span>
+
+          <div class="dropdown-menu">
+            <p>Simpan Lowongan</p>
+            <p>Bagikan</p>
+            <p>Tidak Tertarik</p>
+            <p>Laporkan</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="job-info">
+        <span>Bandung</span>
+        <span>Purnawaktu</span>
+        <span>Rp 10–15 juta</span>
+        <span>3 hari lalu</span>
+      </div>
+
+      <p class="job-desc">Dibutuhkan Backend Engineer yang menguasai Node.js dan PostgreSQL untuk mengembangkan API scalable dan sistem database yang efisien.</p>
+
+      <div class="job-actions">
+        <button class="btn-primary">Lamar Sekarang</button>
+        <button class="btn-outline">Lihat Detail</button>
+      </div>
+    </div>
+
+    <!-- ===================== CARD 3 ===================== -->
+    <div class="job-card">
+      <div class="job-header">
+        <div class="job-logo"></div>
+
+        <div>
+          <h3>UI/UX Designer</h3>
+          <p>PixelCraft Agency</p>
+        </div>
+
+        <div class="job-actions-top">
+          <span class="menu-btn">⋮</span>
+
+          <div class="dropdown-menu">
+            <p>Simpan Lowongan</p>
+            <p>Bagikan</p>
+            <p>Tidak Tertarik</p>
+            <p>Laporkan</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="job-info">
+        <span>Yogyakarta</span>
+        <span>Kontrak</span>
+        <span>Rp 6–9 juta</span>
+        <span>1 minggu lalu</span>
+      </div>
+
+      <p class="job-desc">Kami mencari desainer kreatif dengan pengalaman dalam Figma dan Adobe XD untuk menciptakan pengalaman pengguna yang menarik dan mudah digunakan.</p>
+
+      <div class="job-actions">
+        <button class="btn-primary">Lamar Sekarang</button>
+        <button class="btn-outline">Lihat Detail</button>
+      </div>
+    </div>
+
+    <!-- ===================== CARD 4 ===================== -->
+    <div class="job-card">
+      <div class="job-header">
+        <div class="job-logo"></div>
+
+        <div>
+          <h3>Data Analyst</h3>
+          <p>InsightPlus Corp</p>
+        </div>
+
+        <div class="job-actions-top">
+          <span class="menu-btn">⋮</span>
+
+          <div class="dropdown-menu">
+            <p>Simpan Lowongan</p>
+            <p>Bagikan</p>
+            <p>Tidak Tertarik</p>
+            <p>Laporkan</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="job-info">
+        <span>Surabaya</span>
+        <span>Purnawaktu</span>
+        <span>Rp 7–11 juta</span>
+        <span>3 hari lalu</span>
+      </div>
+
+      <p class="job-desc">Bertanggung jawab untuk menganalisis data bisnis menggunakan Python, SQL, dan Excel untuk menghasilkan insight strategis bagi perusahaan.</p>
+
+      <div class="job-actions">
+        <button class="btn-primary">Lamar Sekarang</button>
+        <button class="btn-outline">Lihat Detail</button>
+      </div>
+    </div>
+
+    <!-- ===================== CARD 5 ===================== -->
+    <div class="job-card">
+      <div class="job-header">
+        <div class="job-logo"></div>
+
+        <div>
+          <h3>Mobile App Developer</h3>
+          <p>Appify Tech</p>
+        </div>
+
+        <div class="job-actions-top">
+          <span class="menu-btn">⋮</span>
+
+          <div class="dropdown-menu">
+            <p>Simpan Lowongan</p>
+            <p>Bagikan</p>
+            <p>Tidak Tertarik</p>
+            <p>Laporkan</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="job-info">
+        <span>Semarang</span>
+        <span>Remote</span>
+        <span>Rp 9–13 juta</span>
+        <span>Hari ini</span>
+      </div>
+
+      <p class="job-desc">Dicari Mobile App Developer dengan pengalaman di Flutter atau React Native untuk membangun aplikasi Android & iOS berkinerja tinggi.</p>
+
+      <div class="job-actions">
+        <button class="btn-primary">Lamar Sekarang</button>
+        <button class="btn-outline">Lihat Detail</button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===================== JS Dropdown ===================== -->
+  <script>
+    document.querySelectorAll('.menu-btn').forEach((btn, index) => {
+      btn.addEventListener('click', () => {
+        const menu = document.querySelectorAll('.dropdown-menu')[index];
+        menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+      });
+    });
+
+    document.addEventListener('click', function(e) {
+      document.querySelectorAll('.dropdown-menu').forEach(menu => {
+        if (!menu.parentElement.contains(e.target)) {
+          menu.style.display = 'none';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
