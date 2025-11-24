@@ -11,23 +11,33 @@
 <body>
 
     <nav>
-        <h2>LokerIn</h2>
-        <p>Dashboard</p>
-        <p>Lowongan</p>
-        <p>Kandidat</p>
-        <p>Profile</p>
+        <div class="navKiri">
+            <h2>Loker<span class="judul-in">In</span></h2>
+        </div>
 
-        <div class="profileContainer">
-            <label class="profilePicture">
-                <img src="assets/image/Border_ProfilePicture.png" alt="Border_ProfilePicture">
-                <img src="assets/image/icon_profile.png" alt="ProfilePicture">
-            </label>
+        <div class="navKanan">
+            <p>Dashboard</p>
+            <p>Lowongan</p>
+            <p>Kandidat</p>
+            <p>Profile</p>
+    
+            <div class="profileContainer">
+                <div class="avatarWrapper">
+                    <img src="assets/image/Border_ProfilePicture.png" class="avatarBorder">
+                    <img src="assets/image/icon_profile.png" class="avatarImage">
+                </div>
 
-            <select class="profileSelect">
-                <option value="1">Pilihan 1</option>
-                <option value="2">Pilihan 2</option>
-                <option value="3">Pilihan 3</option>
-            </select>
+                <div class="dropdownProfile">
+                    <button class="dropdownBtn">▼</button>
+
+                    <div class="dropdownMenu">
+                        <p class="menuItem">Profile</p>
+                        <p class="menuItem">Logout</p>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
     </nav>
 
@@ -60,13 +70,27 @@
     
                 <p>Deskripsi Pekerjaan</p>
                 <div class="jobDescContainer">
-    
                     <div class="textEditorToolbar">
-                        <p>B I U Align List Number Full</p>
+                        <button data-command="bold"><b>B</b></button>
+                        <button data-command="italic"><i>I</i></button>
+                        <button data-command="underline"><u>U</u></button>
+
+                        <button data-command="justifyLeft">⯇</button>
+                        <button data-command="justifyCenter">⬌</button>
+                        <button data-command="justifyRight">⯈</button>
+
+                        <button data-command="insertUnorderedList">• List</button>
+                        <button data-command="insertOrderedList">1. List</button>
+
+                        <button id="fullscreenBtn">⛶</button>
                     </div>
-    
-                    <textarea class="jobDescArea" placeholder="Isi Disini" required></textarea>
+
+                    <div id="editor" class="jobDescArea" contenteditable="true">
+                        Isi Disini...
+                    </div>
+
                 </div>
+
             </section>
     
             <section class="logistik">
@@ -112,7 +136,7 @@
         </form>
 
     </div>
-
+<script src="tambahLowongan.js"></script>
 </body>
 
 </html>
