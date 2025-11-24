@@ -55,3 +55,52 @@ button {
 .str3 p {
     margin: 6px 0; 
 }
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 14px;
+    margin: 8px 0 15px 0;
+    border: 1px solid #c7c7c7;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.2s ease;
+    background-color: #F7F9FC;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+    color: #8a8a8a;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #0066cc;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.2);
+}
+
+button.tombol-login {
+    color: rgb(0, 0, 82);
+    background-color: aqua;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+
+button.tombol-login:hover {
+    background-color: #00d4d4;        /* lebih gelap sedikit */
+    transform: translateY(-2px);      /* angkat sedikit */
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+
+button.tombol-login:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
