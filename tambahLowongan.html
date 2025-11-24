@@ -39,12 +39,12 @@
                 <h4>Informasi Dasar</h4>
     
                 <p>Judul Pekerjaan / Nama Posisi</p>
-                <input type="text" placeholder="e.g., Senior Software Engineer">
+                <input type="text" placeholder="e.g., Senior Software Engineer" required>
     
                 <section class="kategoriPekerjaan">
                     <p>Kategori Pekerjaan</p>
     
-                    <select>
+                    <select required>
                         <option value="fulltime">Penuh Waktu</option>
                         <option value="parttime">Paruh Waktu</option>
                         <option value="freelance">Freelance</option>
@@ -65,14 +65,14 @@
                         <p>B I U Align List Number Full</p>
                     </div>
     
-                    <textarea class="jobDescArea" placeholder="Isi Disini"></textarea>
+                    <textarea class="jobDescArea" placeholder="Isi Disini" required></textarea>
                 </div>
             </section>
     
             <section class="logistik">
                 <h4>Logistik</h4>    
                 <p>Gaji</p>
-                <select class="salaryCurrency">
+                <select class="salaryCurrency" required>
                     <option value="idr">IDR</option>
                     <option value="usd">USD</option>
                     <option value="jpy">JPY</option>
@@ -81,7 +81,7 @@
                 <input type="text" placeholder="Rp1.500.000 - Rp3.500.000">
     
                 <p>Lokasi Kerja</p>
-                <select class="jobLocation">
+                <select class="jobLocation" required>
                     <option value="medan">Medan</option>
                     <option value="binjai">Binjai</option>
                     <option value="tebingTinggi">Tebing Tinggi</option>
@@ -95,12 +95,12 @@
     
             <section class="postDate">
                 <p>Tanggal Posting</p>
-                <input type="date">
+                <input type="date" required>
             </section>
     
             <section class="deadlineDate">
                 <p>Deadline Lamaran</p>
-                <input type="date">
+                <input type="date" required>
             </section>
     
             <section class="Pertombolan">
