@@ -1,0 +1,348 @@
+/* ========== Font ========== */
+@font-face {
+    font-family: 'Poppins';
+    src: url('assets/Font/Poppins-Regular.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #F6F8FA;
+    color: #222;
+}
+
+/* ========== NAVBAR ========== */
+nav {
+    background-color: #022044;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+nav h2 {
+    font-size: 26px;
+    margin: 0;
+    font-weight: 600;
+}
+
+/* Efek warna "In" */
+nav .judul-in {
+    background: linear-gradient(135deg, #56C3E7, #8EE8FF);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 700;
+}
+
+/* Menu kanan navbar */
+.navKanan {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navKanan p {
+    margin: 0;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.2s;
+}
+
+.navKanan a {
+    text-decoration: none;   /* Hilangkan underline */
+    color: white;            /* Warna font putih */
+    opacity: 0.85;           /* Biar sama kayak efek <p> tadi */
+    transition: 0.25s;
+}
+
+.navKanan a:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+
+.navKanan p:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+/* Profile avatar */
+.profileContainer {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.profilePicture img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.profileSelect {
+    background: #022044;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* ========== FORM CONTAINER ========== */
+.formContainer {
+    width: 60%;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Judul section */
+h3, h4 {
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 6px;
+}
+
+/* INPUT + SELECT */
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 15px;
+    border: 1px solid #CDD4DF;
+    border-radius: 10px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.25s;
+    background: #FDFDFD;
+}
+
+/* Efek focus */
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #4AAFE2;
+    box-shadow: 0 0 6px rgba(74, 175, 226, 0.4);
+}
+
+/* ========== TEXTAREA + TOOLBAR ========== */
+.textEditorToolbar {
+    display: flex;
+    gap: 6px;
+    padding: 8px;
+    border: 1px solid #CDD4DF;
+    border-radius: 8px;
+    background: #F1F5F9;
+}
+
+.textEditorToolbar button {
+    padding: 6px 10px;
+    background: white;
+    border: 1px solid #C8D0DD;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.textEditorToolbar button:hover {
+    background: #E2E8F0;
+}
+
+.jobDescArea {
+    min-height: 150px;
+    padding: 10px;
+    border: 1px solid #CDD4DF;
+    border-radius: 10px;
+    background: #FFFFFF;
+    resize: none;
+}
+
+/* FULLSCREEN */
+.fullscreenMode {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: white;
+    padding: 20px;
+    z-index: 9999;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.3);
+    overflow: auto;
+}
+
+.fullscreenMode .jobDescArea {
+    min-height: calc(100vh - 180px); 
+}
+
+
+
+.jobDescContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Toolbar editor */
+.textEditorToolbar {
+    padding: 8px;
+    border: 1px solid #CDD4DF;
+    border-radius: 8px;
+    background: #F1F5F9;
+    font-size: 14px;
+}
+
+.jobDescArea {
+    min-height: 150px;
+    resize: none;
+    border-radius: 10px;
+}
+
+/* ========== BUTTONS ========== */
+.Pertombolan {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+/* Style tombol dasar */
+.Pertombolan button {
+    padding: 10px 18px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+/* Tombol spesifik */
+.draftbuttonloker {
+    background: #E0E6ED;
+}
+
+.submitbuttonnewloker {
+    background: #0284C7;
+    color: white;
+}
+
+.resetbuttonloker {
+    background: #FEE2E2;
+    color: #B91C1C;
+}
+
+.cancelbuttonloker {
+    background: #64748B;
+    color: white;
+}
+
+/* Hover animasi */
+.Pertombolan button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== PROFILE AVATAR ===== */
+.profileContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+/* Tempat gambar + border */
+.avatarWrapper {
+    width: 42px;
+    height: 42px;
+    position: relative;
+}
+
+.avatarBorder {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.avatarImage {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* ===== DROPDOWN BUTTON ===== */
+.dropdownProfile {
+    position: relative;
+}
+
+.dropdownBtn {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 4px 6px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.dropdownBtn:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* ===== DROPDOWN MENU ===== */
+.dropdownMenu {
+    position: absolute;
+    right: 0;
+    top: 30px;
+    background: white;
+    color: black;
+    min-width: 120px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 50;
+}
+
+.dropdownMenu p {
+    margin: 0;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.dropdownMenu p:hover {
+    background: #F1F5F9;
+}
+
+/* Tampilkan saat aktif */
+.dropdownProfile.active .dropdownMenu {
+    display: flex;
+}
+
+.menuItem {
+    margin: 0;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.menuItem:hover {
+    background: #F1F5F9;
+}

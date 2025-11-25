@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang = "id">
+<html lang="id">
 
-    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,16 +9,134 @@
 </head>
 
 <body>
+
     <nav>
-        <h2>LokerIn</h2>
-        <p>Dashboard</p>
-        <p>Lowongan</p>
-        <p>Kandidat</p>
-        <p>Profile</p>
-        <div>
-            <img src=""
+        <div class="navKiri">
+            <h2>Loker<span class="judul-in">In</span></h2>
+        </div>
+
+        <div class="navKanan">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="lowongan.html">Lowongan</a>
+            <a href="kandidat.html">Kandidat</a>
+            <a href="profile.html">Profile</a>
+    
+            <div class="profileContainer">
+                <div class="avatarWrapper">
+                    <img src="assets/image/Border_ProfilePicture.png" class="avatarBorder">
+                    <img src="assets/image/icon_profile.png" class="avatarImage">
+                </div>
+
+                <div class="dropdownProfile">
+                    <button class="dropdownBtn">▼</button>
+
+                    <div class="dropdownMenu">
+                        <p class="menuItem">Profile</p>
+                        <p class="menuItem">Logout</p>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
     </nav>
+
+    
+    <div class="formContainer">
+        <form action="#" method="POST">
+            <section class="infoDasar">
+                <h3>Buat Lowongan Baru</h3>
+                <h4>Informasi Dasar</h4>
+    
+                <p>Judul Pekerjaan / Nama Posisi</p>
+                <input type="text" placeholder="e.g., Senior Software Engineer" required>
+    
+                <section class="kategoriPekerjaan">
+                    <p>Kategori Pekerjaan</p>
+    
+                    <select required>
+                        <option value="fulltime">Penuh Waktu</option>
+                        <option value="parttime">Paruh Waktu</option>
+                        <option value="freelance">Freelance</option>
+                        <option value="magang">Magang</option>
+                        <option value="kontrak">Kontrak</option>
+                    </select>
+                </section>
+            </section>
+    
+            
+            <section class="detailPekerjaan">
+                <h4>Detail Pekerjaan</h4>
+    
+                <p>Deskripsi Pekerjaan</p>
+                <div class="jobDescContainer">
+                    <div class="textEditorToolbar">
+                        <button data-command="bold"><b>B</b></button>
+                        <button data-command="italic"><i>I</i></button>
+                        <button data-command="underline"><u>U</u></button>
+
+                        <button data-command="justifyLeft">⯇</button>
+                        <button data-command="justifyCenter">⬌</button>
+                        <button data-command="justifyRight">⯈</button>
+
+                        <button data-command="insertUnorderedList">• List</button>
+                        <button data-command="insertOrderedList">1. List</button>
+
+                        <button id="fullscreenBtn">⛶</button>
+                    </div>
+
+                    <div id="editor" class="jobDescArea" contenteditable="true">
+                        Isi Disini...
+                    </div>
+
+                </div>
+
+            </section>
+    
+            <section class="logistik">
+                <h4>Logistik</h4>    
+                <p>Gaji</p>
+                <select class="salaryCurrency" required>
+                    <option value="idr">IDR</option>
+                    <option value="usd">USD</option>
+                    <option value="jpy">JPY</option>
+                </select>
+    
+                <input type="text" placeholder="Rp1.500.000 - Rp3.500.000">
+    
+                <p>Lokasi Kerja</p>
+                <select class="jobLocation" required>
+                    <option value="medan">Medan</option>
+                    <option value="binjai">Binjai</option>
+                    <option value="tebingTinggi">Tebing Tinggi</option>
+                    <option value="pematangsiantar">Pematangsiantar</option>
+                    <option value="tanjungbalai">Tanjungbalai</option>
+                    <option value="padangsidimpuan">Padangsidimpuan</option>
+                    <option value="sibolga">Sibolga</option>
+                    <option value="gunungsitoli">Gunungsitoli</option>
+                </select>
+            </section>
+    
+            <section class="postDate">
+                <p>Tanggal Posting</p>
+                <input type="date" required>
+            </section>
+    
+            <section class="deadlineDate">
+                <p>Deadline Lamaran</p>
+                <input type="date" required>
+            </section>
+    
+            <section class="Pertombolan">
+                <button type="button" class="draftbuttonloker">Draft</button>
+                <button type="submit" class="submitbuttonnewloker">Posting Loker</button>
+                <button type="reset" class="resetbuttonloker">Ulangi</button>
+                <button type="button" class="cancelbuttonloker">Batalkan</button>
+            </section>
+        </form>
+
+    </div>
+<script src="tambahLowongan.js"></script>
 </body>
 
 </html>

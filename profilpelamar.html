@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Profil Pelamar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-wrapper">
+            <h1 class="title">Form Profil Pelamar</h1>
+            <p class="subtitle">Lengkapi data diri Anda untuk melamar pekerjaan</p>
+            
+            <form id="profilForm">
+                <div class="form-grid">
+                    <!-- Nama Lengkap -->
+                    <div class="form-group">
+                        <label for="nama">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                            Nama Lengkap
+                        </label>
+                        <input type="text" id="nama" placeholder="Masukkan nama lengkap" required>
+                    </div>
+
+                    <!-- Tanggal Lahir -->
+                    <div class="form-group">
+                        <label for="tanggalLahir">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                            </svg>
+                            Tanggal Lahir
+                        </label>
+                        <div class="date-input-wrapper">
+                            <input type="text" id="tanggalLahir" placeholder="dd/mm/yyyy" readonly>
+                            <button type="button" class="calendar-btn" id="calendarBtn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                    <line x1="16" y1="2" x2="16" y2="6"/>
+                                    <line x1="8" y1="2" x2="8" y2="6"/>
+                                    <line x1="3" y1="10" x2="21" y2="10"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Jenis Kelamin -->
+                    <div class="form-group">
+                        <label for="jenisKelamin">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                            Jenis Kelamin
+                        </label>
+                        <div class="select-wrapper">
+                            <select id="jenisKelamin" required>
+                                <option value="">Pilih jenis kelamin</option>
+                                <option value="Laki-laki">Laki-laki</option>
+                                <option value="Perempuan">Perempuan</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- No WhatsApp -->
+                    <div class="form-group">
+                        <label for="whatsapp">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            No WhatsApp
+                        </label>
+                        <input type="tel" id="whatsapp" placeholder="08xxxxxxxxxx" required>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            E-mail
+                        </label>
+                        <input type="email" id="email" placeholder="email@contoh.com" required>
+                    </div>
+
+                    <!-- Pendidikan Terakhir -->
+                    <div class="form-group">
+                        <label for="pendidikan">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                            </svg>
+                            Pendidikan Terakhir
+                        </label>
+                        <div class="select-wrapper">
+                            <select id="pendidikan" required>
+                                <option value="">Pilih pendidikan</option>
+                                <option value="SD">SD</option>
+                                <option value="SMP">SMP</option>
+                                <option value="SMA/SMK">SMA/SMK</option>
+                                <option value="D3">D3</option>
+                                <option value="S1">S1</option>
+                                <option value="S2">S2</option>
+                                <option value="S3">S3</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Alamat -->
+                <div class="form-group full-width">
+                    <label for="alamat">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        Alamat / Domisili
+                    </label>
+                    <textarea id="alamat" rows="4" placeholder="Masukkan alamat lengkap" required></textarea>
+                </div>
+
+                <!-- Keahlian / Skill -->
+                <div class="form-group full-width">
+                    <label for="skill">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                        </svg>
+                        Keahlian / Skill
+                    </label>
+                    <input type="text" id="skill" placeholder="Ketik skill dan tekan Enter">
+                    <div class="skills-container" id="skillsContainer"></div>
+                </div>
+
+                <!-- Pengalaman Kerja -->
+                <div class="form-group full-width">
+                    <label for="pengalaman">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                        </svg>
+                        Pengalaman Kerja
+                    </label>
+                    <textarea id="pengalaman" rows="4" placeholder="Jelaskan pengalaman kerja Anda (posisi, perusahaan, periode)"></textarea>
+                </div>
+
+                <!-- Deskripsi Singkat -->
+                <div class="form-group full-width">
+                    <label for="deskripsi">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14,2 14,8 20,8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <polyline points="10,9 9,9 8,9"/>
+                        </svg>
+                        Deskripsi Singkat tentang Diri Sendiri
+                    </label>
+                    <textarea id="deskripsi" rows="5" placeholder="Ceritakan tentang diri Anda, motivasi, dan tujuan karir"></textarea>
+                </div>
+
+                <!-- Foto Profil -->
+                <div class="form-group full-width">
+                    <label for="fotoProfil">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                        Foto Profil
+                    </label>
+                    <div class="file-input-wrapper">
+                        <input type="file" id="fotoProfil" accept="image/*">
+                        <label for="fotoProfil" class="file-label">
+                            <span>Choose File</span>
+                            <span class="file-name">No file chosen</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Upload CV -->
+                <div class="form-group full-width">
+                    <label for="cv">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="17 8 12 3 7 8"/>
+                            <line x1="12" y1="3" x2="12" y2="15"/>
+                        </svg>
+                        Unggah CV
+                    </label>
+                    <div class="file-input-wrapper">
+                        <input type="file" id="cv" accept=".pdf,.doc,.docx">
+                        <label for="cv" class="file-label">
+                            <span>Choose File</span>
+                            <span class="file-name">No file chosen</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Buttons -->
+                <div class="button-group">
+                    <button type="submit" class="btn btn-primary">Simpan Profil</button>
+                    <button type="reset" class="btn btn-secondary">Batal</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Calendar Overlay -->
+    <div class="calendar-overlay" id="calendarOverlay">
+        <div class="calendar-modal">
+            <div class="calendar-header">
+                <button type="button" class="calendar-nav" id="prevMonth">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"/>
+                    </svg>
+                </button>
+                <div class="calendar-title" id="calendarTitle">Januari 2024</div>
+                <button type="button" class="calendar-nav" id="nextMonth">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="calendar-weekdays">
+                <div>Min</div>
+                <div>Sen</div>
+                <div>Sel</div>
+                <div>Rab</div>
+                <div>Kam</div>
+                <div>Jum</div>
+                <div>Sab</div>
+            </div>
+            <div class="calendar-days" id="calendarDays"></div>
+            <div class="calendar-footer">
+                <button type="button" class="btn btn-secondary btn-sm" id="closeCalendar">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
