@@ -51,6 +51,19 @@ nav .judul-in {
     transition: 0.2s;
 }
 
+.navKanan a {
+    text-decoration: none;   /* Hilangkan underline */
+    color: white;            /* Warna font putih */
+    opacity: 0.85;           /* Biar sama kayak efek <p> tadi */
+    transition: 0.25s;
+}
+
+.navKanan a:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+
 .navKanan p:hover {
     opacity: 1;
     transform: translateY(-2px);
