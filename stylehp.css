@@ -34,6 +34,14 @@ body {
   color: var(--primary);
 }
 
+.in {
+  color: #A7EBF3;
+}
+
+.navbar .logo{
+  color: #011C40;
+}
+
 .navbar nav a {
   margin-left: 25px;
   text-decoration: none;
