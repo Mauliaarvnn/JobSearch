@@ -1,0 +1,268 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('assets/Font/Poppins-Regular.ttf') format('truetype');
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* ---- GLOBAL ---- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F5F7FA;
+    margin: 0;
+    padding: 0;
+}
+
+/* ---- NAVBAR ---- */
+nav {
+    max-width: 100%;
+    overflow: hidden;
+    width: 100%;
+    height: 70px;
+    background-color: #284e80; /* secondary */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+nav .MentokKiri {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav .MentokKanan {
+    flex-wrap: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #9CE7F1; /* primary */
+}
+
+/* ---- LOGO ---- */
+img.logo {
+    width: 40px;
+    height: auto;
+}
+
+nav h3 {
+    font-size: 22px;
+    margin: 0;
+}
+
+nav h3 span {
+    color: #9CE7F1;
+}
+
+/* ---- PROFILE ICON ---- */
+.profile {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.profile .border {
+    width: 100%;
+    height: 100%;
+}
+
+.profile .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 60%;
+    transform: translate(-50%, -50%);
+}
+
+/* ---- CONTAINER ---- */
+.Container {
+    width: 90%;
+    margin: 30px auto;
+}
+
+/* ---- HEADER LAMARAN ---- */
+
+
+.lamaran {
+    background-color: white;
+    padding: 20px 25px;
+    border-left: 6px solid #9CE7F1;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.lamaran h3 {
+    margin: 0;
+    font-size: 22px;
+    color: #011C40;
+}
+
+.lamaran p {
+    margin: 5px 0 0;
+}
+
+/* ---- BUTTON NEW POSTING ---- */
+.tambahLoker {
+    background-color: #9CE7F1;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #011C40;
+    transition: .2s;
+}
+
+.tambahLoker:hover {
+    background-color: #7dd4e0;
+}
+
+/* ---- TABLE ---- */
+.boxpelamar {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.flexCell {
+    display: flex;
+    align-items: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    padding: 15px;
+    font-size: 16px;
+    background-color: #011C40;
+    color: white;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* ---- FOTO + NAMA ---- */
+.fotoPelamar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.td1st {
+    display: flex;
+    align-items: center;
+}
+
+
+td:first-child {
+    display: flex;
+    align-items: center;
+}
+
+.namaPelamar {
+    font-weight: 600;
+    margin: 0;
+}
+
+.PosisiPelamarSebelumnya {
+    font-size: 13px;
+    color: #666;
+    margin: 0;
+}
+
+/* ---- STATUS ---- */
+.statusPelamar {
+    background-color: #9CE7F1;
+    color: #011C40;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+/* ---- ACTION BUTTONS ---- */
+.tombolprofil,
+.tombolhubungi {
+    padding: 7px 15px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: .2s;
+    font-weight: 500;
+}
+
+.tombolprofil {
+    background-color: #9CE7F1;
+    color: #011C40;
+}
+
+.tombolprofil:hover {
+    background-color: #7dd4e0;
+}
+
+.tombolhubungi {
+    background-color: #011C40;
+    color: white;
+}
+
+.tombolhubungi:hover {
+    background-color: #02275d;
+}
+
+/* ---- MORE OPTIONS BUTTON ---- */
+button.opsilanjutan {
+    width: 35px;
+    height: 35px;
+    border-radius: 6px;
+    border: none;
+    background-color: #E8F9FC;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button.opsilanjutan:hover {
+    background-color: #cfeff4;
+}
+
+button.opsilanjutan img {
+    width: 17px;
+    height: 17px;
+}
