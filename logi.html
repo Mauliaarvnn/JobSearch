@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Pelamar</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0B3C5D, #1E5F74);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-container {
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 350px;
+      text-align: center;
+    }
+
+    .login-container img {
+      width: 50px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin-bottom: 8px;
+      color: #0B3C5D;
+    }
+
+    p {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      margin: 10px 0;
+    }
+
+    .login-btn {
+      background-color: #A0E7E5;
+      border: none;
+      width: 100%;
+      padding: 10px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .login-btn:hover {
+      background-color: #8bb6b4;
+    }
+
+    .footer-text {
+      margin-top: 15px;
+      font-size: 13px;
+    }
+
+    .footer-text a {
+      color: #1E5F74;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .footer-text a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Pelamar">
+    <h2>Login Pelamar</h2>
+    <p>Masuk untuk melanjutkan lamaran pekerjaan Anda</p>
+
+    <input type="email" placeholder="nama@email.com">
+    <input type="password" placeholder="Masukkan password">
+
+    <div class="options">
+      <label><input type="checkbox"> Ingat saya</label>
+      <a href="#" style="color: #A0E7E5;">Lupa password?</a>
+    </div>
+
+    <button class="login-btn">Masuk ke Akun</button>
+
+    <div class="footer-text">
+      Belum punya akun? <a href="#">Daftar sebagai pelamar sekarang</a><br>
+      Login sebagai perusahaan? <a href="#">Klik di sini</a>
+    </div>
+  </div>
+</body>
+</html>
