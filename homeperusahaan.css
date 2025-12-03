@@ -1,3 +1,63 @@
+.job-header {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .floating-btn a {
+     text-decoration: none;
+     color: inherit;
+        
+    }
+
+    .job-actions-top {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      display: flex;
+      gap: 12px;
+      font-size: 20px;
+      cursor: pointer;
+      color: #555;
+    }
+
+    .job-actions-top span:hover {
+      color: #000;
+    }
+
+    /* Dropdown menu */
+    .dropdown-menu {
+      position: absolute;
+      top: 35px;
+      right: 0;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      width: 160px;
+      display: none;
+      flex-direction: column;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      animation: fadeIn .2s ease;
+      z-index: 10;
+    }
+
+    .dropdown-menu p {
+      padding: 10px 14px;
+      margin: 0;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .dropdown-menu p:hover {
+      background: #f3f3f3;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
 /* Style guide colors */
 :root {
   --primary: #0a84ff;
@@ -32,14 +92,6 @@ body {
   font-weight: 600;
   font-size: 20px;
   color: var(--primary);
-}
-
-.in {
-  color: #A7EBF3;
-}
-
-.navbar .logo{
-  color: #011C40;
 }
 
 .navbar nav a {
@@ -151,3 +203,32 @@ body {
   cursor: pointer;
   color: var(--primary);
 }
+
+   
+   .floating-btn {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 14px 22px;
+      border-radius: 50px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+      z-index: 100;
+    }
+
+    .floating-btn:hover {
+      background: #005fcc;
+    }
+
+    .job-history {
+       background: var(--white);
+    padding: 24px;
+        border-radius: var(--radius);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+         margin-bottom: 20px;
+    }

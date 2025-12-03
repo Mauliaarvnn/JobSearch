@@ -185,8 +185,6 @@ textarea:focus {
     min-height: calc(100vh - 180px); 
 }
 
-
-
 .jobDescContainer {
     display: flex;
     flex-direction: column;
