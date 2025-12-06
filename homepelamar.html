@@ -6,73 +6,18 @@
   <title>LokerIn - Beranda</title>
   <link rel="stylesheet" href="stylehp.css" />
 
-  <style>
-    /* --- Tambahan CSS Supaya Menu & Share Jalan --- */
-
-    .job-header {
-      position: relative;
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-
-    .job-actions-top {
-      position: absolute;
-      right: 10px;
-      top: 10px;
-      display: flex;
-      gap: 12px;
-      font-size: 20px;
-      cursor: pointer;
-      color: #555;
-    }
-
-    .job-actions-top span:hover {
-      color: #000;
-    }
-
-    /* Dropdown menu */
-    .dropdown-menu {
-      position: absolute;
-      top: 35px;
-      right: 0;
-      background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      width: 160px;
-      display: none;
-      flex-direction: column;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-      animation: fadeIn .2s ease;
-      z-index: 10;
-    }
-
-    .dropdown-menu p {
-      padding: 10px 14px;
-      margin: 0;
-      font-size: 14px;
-      cursor: pointer;
-    }
-
-    .dropdown-menu p:hover {
-      background: #f3f3f3;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-5px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
 </head>
 
 <body>
 
   <header class="navbar">
-    <div class="logo">Loker<span class="in">In<span></div>
+    <div class="logo">
+      <img src="assets/image/logo_lokerin.png" alt="logo_lokerin">
+      Loker<span class="in">In<span></div>
     <nav>
       <a href="#" class="active">Beranda</a>
       <a href="#">Notifikasi</a>
-      <a href="#">Profil</a>
+      <a href="profilpelamar.html">Profil</a>
     </nav>
   </header>
 
@@ -84,16 +29,16 @@
   <section class="list-section">
     <h2>5 Lowongan Ditemukan</h2>
 
-    <!-- ===================== CARD 1 ===================== -->
     <div class="job-card">
       <div class="job-header">
-        <div class="job-logo"></div>
+        <div class="job-logo">
+          <img src="assets/image/Frontend Developer.png" alt="Frontend Developer Logo">
+        </div>
         <div>
           <h3>Frontend Developer</h3>
           <p>Tech Innovate</p>
         </div>
 
-        <!-- Share + Menu -->
         <div class="job-actions-top">
           <span class="menu-btn">⋮</span>
 
@@ -121,17 +66,17 @@
       </div>
     </div>
 
-    <!-- ===================== CARD 2 ===================== -->
     <div class="job-card">
       <div class="job-header">
-        <div class="job-logo"></div>
+        <div class="job-logo">
+          <img src="assets/image/Backend.jpg" alt="Backend Engineer Logo">
+        </div>
 
         <div>
           <h3>Backend Engineer</h3>
           <p>DataWorks Studio</p>
         </div>
 
-        <!-- Share + Menu -->
         <div class="job-actions-top">
           <span class="menu-btn">⋮</span>
 
@@ -159,10 +104,11 @@
       </div>
     </div>
 
-    <!-- ===================== CARD 3 ===================== -->
     <div class="job-card">
       <div class="job-header">
-        <div class="job-logo"></div>
+        <div class="job-logo">
+          <img src="assets/image/UIUX.jpg" alt="UI/UX Designer Logo">
+        </div>
 
         <div>
           <h3>UI/UX Designer</h3>
@@ -196,10 +142,11 @@
       </div>
     </div>
 
-    <!-- ===================== CARD 4 ===================== -->
     <div class="job-card">
       <div class="job-header">
-        <div class="job-logo"></div>
+        <div class="job-logo">
+          <img src="assets/image/Analist.jpg" alt="Data Analyst Logo">
+        </div>
 
         <div>
           <h3>Data Analyst</h3>
@@ -234,10 +181,11 @@
       </div>
     </div>
 
-    <!-- ===================== CARD 5 ===================== -->
     <div class="job-card">
       <div class="job-header">
-        <div class="job-logo"></div>
+        <div class="job-logo">
+          <img src="assets/image/MobileApp.jpg" alt="Mobile App Developer Logo">
+        </div>
 
         <div>
           <h3>Mobile App Developer</h3>
