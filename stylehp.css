@@ -12,7 +12,7 @@
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  background: var(--bg);
+  background: #1e3c72;
   color: var(--text);
 }
 
@@ -20,7 +20,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--white);
+  background: #fff;
   padding: 14px 40px;
   border-bottom: 1px solid #ddd;
   position: sticky;
@@ -54,6 +54,12 @@ body {
 .navbar .logo{
   color: #011C40;
 }
+
+.navbar {
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.8);
+}
+
 
 .navbar nav a {
   margin-left: 25px;
