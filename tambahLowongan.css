@@ -1,144 +1,346 @@
+/* ========== Font ========== */
+@font-face {
+    font-family: 'Poppins';
+    src: url('assets/Font/Poppins-Regular.ttf') format('truetype');
+}
+/* Container Logo Kiri BARU */
+.MentokKiri {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+}
 
-<!DOCTYPE html>
-<html lang="id">
+/* Gambar Logo */
+.MentokKiri .logo {
+    width: 32px;
+    height: auto;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Tambah Lowongan</title>
-    <link rel="stylesheet" href="tambahLowongan.css">
-</head>
 
-<body>
 
-    <nav>
-         <div class="MentokKiri">
-            <img class="logo" src="assets/image/logo_lokerin.png" alt="logo lokerin">
-            <h3>Loker<span>In</span></h3>
-        </div>
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #F6F8FA;
+    color: #222;
+}
 
-        <div class="navKanan">
-            <p>Dashboard</p>
-            <p>Lowongan</p>
-            <p>Kandidat</p>
-            <p>Profile</p>
-    
-            <div class="profileContainer">
-                <div class="avatarWrapper">
-                    <img src="assets/image/Border_ProfilePicture.png" class="avatarBorder">
-                    <img src="assets/image/icon_profile.png" class="avatarImage">
-                </div>
+/* ========== NAVBAR ========== */
+nav {
+    background-color: #ffffff;
+    color: #011C40;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
 
-                <div class="dropdownProfile">
-                    <button class="dropdownBtn">▼</button>
+nav h3 span {
+    color: #0284C7; /* Warna teks 'In' (biru tua) */
+    font-weight: 700;
+}
 
-                    <div class="dropdownMenu">
-                        <p class="menuItem">Profile</p>
-                        <p class="menuItem">Logout</p>
-                    </div>
-                </div>
+/* Efek warna "In" */
+nav h3 {
+    font-size: 26px;
+    margin: 0;
+    font-weight: 600;
+    color: #011C40; /* Warna teks 'Loker' (biru muda) */
+}
 
-            </div>
+/* Menu kanan navbar */
+.navKanan {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
 
-        </div>
-    </nav>
+.navKanan p {
+    margin: 0;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.2s;
+}
 
-    
-    <div class="formContainer">
-        <form action="#" method="POST">
-            <section class="infoDasar">
-                <h3>Buat Lowongan Baru</h3>
-                <h4>Informasi Dasar</h4>
-    
-                <p>Judul Pekerjaan / Nama Posisi</p>
-                <input type="text" placeholder="e.g., Senior Software Engineer" required>
-    
-                <section class="kategoriPekerjaan">
-                    <p>Kategori Pekerjaan</p>
-    
-                    <select required>
-                        <option value="fulltime">Penuh Waktu</option>
-                        <option value="parttime">Paruh Waktu</option>
-                        <option value="freelance">Freelance</option>
-                        <option value="magang">Magang</option>
-                        <option value="kontrak">Kontrak</option>
-                    </select>
-                </section>
-            </section>
-    
-            
-            <section class="detailPekerjaan">
-                <h4>Detail Pekerjaan</h4>
-    
-                <p>Deskripsi Pekerjaan</p>
-                <div class="jobDescContainer">
-                    <div class="textEditorToolbar">
-                        <button data-command="bold"><b>B</b></button>
-                        <button data-command="italic"><i>I</i></button>
-                        <button data-command="underline"><u>U</u></button>
+.navKanan p:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
 
-                        <button data-command="justifyLeft">⯇</button>
-                        <button data-command="justifyCenter">⬌</button>
-                        <button data-command="justifyRight">⯈</button>
+/* Profile avatar */
+.profileContainer {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
 
-                        <button data-command="insertUnorderedList">• List</button>
-                        <button data-command="insertOrderedList">1. List</button>
+.profilePicture img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
 
-                        <button id="fullscreenBtn">⛶</button>
-                    </div>
+.profileSelect {
+    background: #022044;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
 
-                    <div id="editor" class="jobDescArea" contenteditable="true">
-                        Isi Disini...
-                    </div>
+/* ========== FORM CONTAINER ========== */
+.formContainer {
+    width: 60%;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
 
-                </div>
+/* Judul section */
+h3, h4 {
+    margin-bottom: 8px;
+    font-weight: 600;
+}
 
-            </section>
-    
-            <section class="logistik">
-                <h4>Logistik</h4>    
-                <p>Gaji</p>
-                <select class="salaryCurrency" required>
-                    <option value="idr">IDR</option>
-                    <option value="usd">USD</option>
-                    <option value="jpy">JPY</option>
-                </select>
-    
-                <input type="text" placeholder="Rp1.500.000 - Rp3.500.000">
-    
-                <p>Lokasi Kerja</p>
-                <select class="jobLocation" required>
-                    <option value="medan">Medan</option>
-                    <option value="binjai">Binjai</option>
-                    <option value="tebingTinggi">Tebing Tinggi</option>
-                    <option value="pematangsiantar">Pematangsiantar</option>
-                    <option value="tanjungbalai">Tanjungbalai</option>
-                    <option value="padangsidimpuan">Padangsidimpuan</option>
-                    <option value="sibolga">Sibolga</option>
-                    <option value="gunungsitoli">Gunungsitoli</option>
-                </select>
-            </section>
-    
-            <section class="postDate">
-                <p>Tanggal Posting</p>
-                <input type="date" required>
-            </section>
-    
-            <section class="deadlineDate">
-                <p>Deadline Lamaran</p>
-                <input type="date" required>
-            </section>
-    
-            <section class="Pertombolan">
-                <button type="button" class="draftbuttonloker">Draft</button>
-                <button type="button" class="submitbuttonnewloker" onclick="location.href='homeperusahaan.html'">Posting Loker</button>
-                <button type="reset" class="resetbuttonloker">Ulangi</button>
-                <button type="button" class="cancelbuttonloker">Batalkan</button>
-            </section>
-        </form>
+p {
+    margin-bottom: 6px;
+}
 
-    </div>
-<script src="tambahLowongan.js"></script>
-</body>
+/* INPUT + SELECT */
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 15px;
+    border: 1px solid #CDD4DF;
+    border-radius: 10px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.25s;
+    background: #FDFDFD;
+}
 
-</html>
+/* Efek focus */
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #4AAFE2;
+    box-shadow: 0 0 6px rgba(74, 175, 226, 0.4);
+}
+
+/* ========== TEXTAREA + TOOLBAR ========== */
+.textEditorToolbar {
+    display: flex;
+    gap: 6px;
+    padding: 8px;
+    border: 1px solid #CDD4DF;
+    border-radius: 8px;
+    background: #F1F5F9;
+}
+
+.textEditorToolbar button {
+    padding: 6px 10px;
+    background: white;
+    border: 1px solid #C8D0DD;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.textEditorToolbar button:hover {
+    background: #E2E8F0;
+}
+
+.jobDescArea {
+    min-height: 150px;
+    padding: 10px;
+    border: 1px solid #CDD4DF;
+    border-radius: 10px;
+    background: #FFFFFF;
+    resize: none;
+}
+
+/* FULLSCREEN */
+.fullscreenMode {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: white;
+    padding: 20px;
+    z-index: 9999;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.3);
+    overflow: auto;
+}
+
+.fullscreenMode .jobDescArea {
+    min-height: calc(100vh - 180px); 
+}
+
+.jobDescContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Toolbar editor */
+.textEditorToolbar {
+    padding: 8px;
+    border: 1px solid #CDD4DF;
+    border-radius: 8px;
+    background: #F1F5F9;
+    font-size: 14px;
+}
+
+.jobDescArea {
+    min-height: 150px;
+    resize: none;
+    border-radius: 10px;
+}
+
+/* ========== BUTTONS ========== */
+.Pertombolan {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+/* Style tombol dasar */
+.Pertombolan button {
+    padding: 10px 18px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+/* Tombol spesifik */
+.draftbuttonloker {
+    background: #E0E6ED;
+}
+
+.submitbuttonnewloker {
+    background: #A7EBF3;
+    color: #011C40;
+}
+
+.resetbuttonloker {
+    background: #FEE2E2;
+    color: #B91C1C;
+}
+
+.cancelbuttonloker {
+    background: #64748B;
+    color: white;
+}
+
+/* Hover animasi */
+.Pertombolan button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== PROFILE AVATAR ===== */
+.profileContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+/* Tempat gambar + border */
+.avatarWrapper {
+    width: 42px;
+    height: 42px;
+    position: relative;
+}
+
+.avatarBorder {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.avatarImage {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* ===== DROPDOWN BUTTON ===== */
+.dropdownProfile {
+    position: relative;
+}
+
+.dropdownBtn {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 4px 6px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.dropdownBtn:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* ===== DROPDOWN MENU ===== */
+.dropdownMenu {
+    position: absolute;
+    right: 0;
+    top: 30px;
+    background: white;
+    color: black;
+    min-width: 120px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 50;
+}
+
+.dropdownMenu p {
+    margin: 0;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.dropdownMenu p:hover {
+    background: #F1F5F9;
+}
+
+/* Tampilkan saat aktif */
+.dropdownProfile.active .dropdownMenu {
+    display: flex;
+}
+
+.menuItem {
+    margin: 0;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.menuItem:hover {
+    background: #F1F5F9;
+}
