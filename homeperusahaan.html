@@ -1,259 +1,103 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LokerIn - Beranda</title>
-  <link rel="stylesheet" href="homeperusahaan.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LokerIn</title>
+<link rel="stylesheet" href="homeperusahaan.css">
 </head>
 
 <body>
 
-  <header class="navbar">
-    <div class="logo">Loker<span class="in">In<span></div>
-    <nav>
-      <a href="#" class="active">Beranda</a>
-      <a href="#">Notifikasi</a>
-      <a href="#">Profil</a>
-    </nav>
-  </header>
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="logo">LokerIn</div>
+        <div>
+            <a href="homeperusahaan.html">Beranda</a>
+            <a href="#">Notifikasi</a>
+            <a href="profilePerusahaan.html">Profil</a>
+        </div>
+    </div>
 
-  <section class="search-bar">
-    <input type="text" placeholder="Cari posisi, perusahaan, atau kata kunci..." />
-    <button>Cari</button>
-  </section>
+    <!-- SEARCH BAR -->
+    <div class="search-box">
+        <input type="text" placeholder="Cari posisi, perusahaan, atau kata kunci...">
+        <button>Cari Lowongan</button>
+    </div>
 
-  <section class="list-section">
-    <h2>Lowongan Terakhir yang Dibuat</h2>
-    <div class="job-cards">
-      <div class="job-card">
-        <h3>Nama Posisi : Software Engineer</h3>
-        <p>Kategori Pekerjaan :penuh waktu</p>
-        <p>Detail Pekerjaan :</p>
-        <p>IDR 7,5jt-10 jt</p>
-        <span>PT. Teknologi Indonesia, Jakarta, Indonesia</span>
-        <p>Deadline : 15/11/2025</p>
-      </div>
+    <!-- CONTENT -->
+    <div class="content">
 
+        <div class="content-title">Lowongan Terakhir yang Dibuat</div>
+        <div class="see-all">Lihat Semua</div>
+
+        <!-- JOB CARD 1 -->
         <div class="job-card">
-            <h3>Nama Posisi : Digital Marketing Specialist</h3>
-            <p>Kategori Pekerjaan :paruh waktu</p>
-            <p>Detail Pekerjaan :</p>
-            <p>IDR 5jt-7 jt</p>
-            <span>PT. Kreatif Media, Bandung, Indonesia</span>
-            <p>Deadline : 20/11/2025</p>
-        </div>
-    </div>
-<br><br><br><br>
-  </section>
-  <section class="list-section">
-    <h2>Rekomendasi Pelamar</h2>
+            <span class="status">Penuh Waktu</span>
+            <div class="job-title">Software Engineer</div>
+            <div class="company">PT. Yales Ultima Karya Cabang Jakarta</div>
 
-    <!-- ===================== CARD 1 ===================== -->
-    <div class="job-card">
-      <div class="job-header">
-        <div class="job-logo"></div>
-        <div>
-          <h3>Rivaldo Nainggolan</h3>
-          <p>Frontend Developer</p>
+            <div class="job-info">
+                📍 Jakarta — 💰 IDR 7,5jt - 10jt — ⏳ Deadline: 15 Nov 2025
+            </div>
+
+            <div class="job-desc">
+                Kami mencari Software Engineer berbakat untuk bergabung dalam tim pengembangan kami.
+            </div>
+
+            <div class="job-buttons">
+                <button class="detail-btn">Detail</button>
+
+            </div>
         </div>
 
-        <!-- Share + Menu -->
-        <div class="job-actions-top">
-          <span class="menu-btn">⋮</span>
+        <!-- CARD 2 -->
+        <div class="job-card">
+            <span class="status warning">Paruh Waktu</span>
+            <div class="job-title">Digital Marketing Specialist</div>
+            <div class="company">PT. Yales Ultima Karya Cabang Bandung</div>
 
-          <div class="dropdown-menu">
-            <p>Simpan Pelamar</p>
-            <p>Bagikan</p>
-            <p>Tidak Tertarik</p>
-            <p>Laporkan</p>
-          </div>
-        </div>
-      </div>
+            <div class="job-info">
+                📍 Bandung — 💰 IDR 5jt - 7jt — ⏳ Deadline: 20 Nov 2025
+            </div>
 
-      <div class="job-info">
-        <span>Medan</span>
-        <span>23 tahun</span>
-        <span>S1 Teknik Informatika – Universitas Telkom</span>
-        <span>2 hari lalu</span>
-      </div>
+            <div class="job-desc">
+                Bertanggung jawab dalam mengelola kampanye media sosial dan strategi konten digital.
+            </div>
 
-      <p class="job-desc">1 tahun sebagai Frontend Intern di startup e-commerce </p>
-      <p class="job-desc">Keahlian: HTML, CSS, JavaScript, React, Tailwind.</p>
-
-      <div class="job-actions">
-        <button class="btn-primary">Lihat Detail</button>
-      </div>
-    </div>
-
-    <!-- ===================== CARD 2 ===================== -->
-    <div class="job-card">
-      <div class="job-header">
-        <div class="job-logo"></div>
-
-        <div>
-          <h3>Nadya Anggina Putri Siregar</h3>
-          <p>UI/UX Designer</p>
+            <div class="job-buttons">
+                <button class="detail-btn">Detail</button>
+            </div>
         </div>
 
-        <!-- Share + Menu -->
-        <div class="job-actions-top">
-          <span class="menu-btn">⋮</span>
+        <!-- CARD 3 -->
+        <div class="job-card">
+            <span class="status purple">Kontrak</span>
+            <div class="job-title">UI/UX Designer</div>
+            <div class="company">PT. Yales Ultima Karya Cabang Medan</div>
 
-          <div class="dropdown-menu">
-            <p>Simpan Pelamar</p>
-            <p>Bagikan</p>
-            <p>Tidak Tertarik</p>
-            <p>Laporkan</p>
-          </div>
+            <div class="job-info">
+                📍 Medan — 💰 IDR 8jt - 12jt — ⏳ Deadline: 30 Des 2025
+            </div>
+
+            <div class="job-desc">
+                Merancang antarmuka pengguna modern serta pengalaman pengguna yang efisien.
+            </div>
+
+            <div class="job-buttons">
+                <button class="detail-btn">Detail</button>
+            </div>
         </div>
-      </div>
 
-      <div class="job-info">
-        <span>Bandung</span>
-        <span>25 tahun</span>
-        <span>S1 Desain Komunikasi Visual – Universitas Negeri Yogyakarta</span>
-        <span>3 hari lalu</span>
-      </div>
-
-      <p class="job-desc">2 tahun sebagai Freelance UI/UX Designer.</p>
-      <p class="job-desc">Keahlian: Figma, Adobe XD, Wireframing, Prototyping.</p>
-
-      <div class="job-actions">
-        <button class="btn-primary">Lihat Detail</button>
-      </div>
     </div>
 
-    <!-- ===================== CARD 3 ===================== -->
-    <div class="job-card">
-      <div class="job-header">
-        <div class="job-logo"></div>
+    <!-- FOOTER -->
+    <footer>
+        © 2025 LokerIn. All rights reserved.
+    </footer>
 
-        <div>
-          <h3>Maulia Revani Putri</h3>
-          <p>Backend Engineer</p>
-        </div>
-
-        <div class="job-actions-top">
-          <span class="menu-btn">⋮</span>
-
-          <div class="dropdown-menu">
-            <p>Simpan Pelamar</p>
-            <p>Bagikan</p>
-            <p>Tidak Tertarik</p>
-            <p>Laporkan</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="job-info">
-        <span>Yogyakarta</span>
-        <span>27 tahun</span>
-        <span>S1 Sistem Informasi – Universitas Brawijaya</span>
-        <span>1 minggu lalu</span>
-      </div>
-      <p class="job-desc">3 tahun sebagai Backend Developer di perusahaan fintech.</p>
-      <p class="job-desc">Keahlian: PHP, Laravel, MySQL, Node.js, REST API</p>
-      <div class="job-actions">
-
-        <button class="btn-primary">Lihat Detail</button>
-      </div>
-    </div>
-
-    <!-- ===================== CARD 4 ===================== -->
-    <div class="job-card">
-      <div class="job-header">
-        <div class="job-logo"></div>
-
-        <div>
-          <h3>Annisa Jannati'Adnin</h3>
-          <p>Digital Marketing Specialist</p>
-        </div>
-
-        <div class="job-actions-top">
-          <span class="menu-btn">⋮</span>
-
-          <div class="dropdown-menu">
-            <p>Simpan Pelamar</p>
-            <p>Bagikan</p>
-            <p>Tidak Tertarik</p>
-            <p>Laporkan</p>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="job-info">
-        <span>Medan</span>
-        <span>24 tahun</span>
-        <span>S1 Ilmu Komunikasi – Universitas Padjadjaran</span>
-        <span>3 hari lalu</span>
-      </div>
-
-      <p class="job-desc">2 tahun di agensi marketing.</p>
-        <p class="job-desc">Keahlian: SEO, SEM, Google Analytics, Content Marketing.</p>
-
-      <div class="job-actions">
-        <button class="btn-primary">Lihat Detail</button>
-      </div>
-    </div>
-
-    <!-- ===================== CARD 5 ===================== -->
-    <div class="job-card">
-      <div class="job-header">
-        <div class="job-logo"></div>
-
-        <div>
-          <h3>Khalif Al Malik Yales</h3>
-          <p>Mobile App Developer</p>
-        </div>
-
-        <div class="job-actions-top">
-          <span class="menu-btn">⋮</span>
-
-          <div class="dropdown-menu">
-            <p>Simpan Pelamar</p>
-            <p>Bagikan</p>
-            <p>Tidak Tertarik</p>
-            <p>Laporkan</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="job-info">
-        <span>Semarang</span>
-        <span>24 tahun</span>
-        <span>S1 Teknik Informatika – Universitas Diponegoro</span>
-        <span>Hari ini</span>
-      </div>
-
-      <p class="job-desc">1 tahun freelance + 3 aplikasi di Play Store</p>
-        <p class="job-desc">Keahlian: Dart, Flutter, JavaScript, React Native.</p>
-
-      <div class="job-actions">
-        <button class="btn-primary">Lihat Detail</button>
-      </div>
-    </div>
-    <button class="floating-btn"><a href="tambahLowongan.html">+ Tambah Lowongan</a></button>
-  </section>
-
-  <!-- ===================== JS Dropdown ===================== -->
-  <script>
-    document.querySelectorAll('.menu-btn').forEach((btn, index) => {
-      btn.addEventListener('click', () => {
-        const menu = document.querySelectorAll('.dropdown-menu')[index];
-        menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-      });
-    });
-
-    document.addEventListener('click', function(e) {
-      document.querySelectorAll('.dropdown-menu').forEach(menu => {
-        if (!menu.parentElement.contains(e.target)) {
-          menu.style.display = 'none';
-        }
-      });
-    });
-  </script>
+    <!-- FLOATING BUTTON -->
+    <div class="floating-btn" onclick="location.href='tambahLowongan.html'">+</div>
 
 </body>
 </html>

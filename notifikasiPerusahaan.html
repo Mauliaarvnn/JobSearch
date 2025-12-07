@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LokerIn - Notifikasi</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">LokerIn</div>
+            <ul class="nav-links">
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#" class="active">Notifikasi</a></li>
+                <li><a href="#">Profil</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <div class="notification-card">
+            
+            <div class="card-header">
+                <h2>Notifications</h2>
+                <div class="header-actions">
+                    <button class="btn-mark">Mark all as read</button>
+                    <i class="fa-solid fa-gear settings-icon"></i>
+                </div>
+            </div>
+
+            <div class="notification-list">
+
+                <div class="notif-item">
+                    <div class="icon-wrapper bg-blue">
+                        <i class="fa-solid fa-user-plus"></i>
+                    </div>
+                    <div class="notif-content">
+                        <h3>New Application</h3>
+                        <p>You received a new application for the <strong>Senior UX Designer</strong> position.</p>
+                    </div>
+                    <div class="notif-meta">
+                        <span class="time">2 hours ago</span>
+                        <span class="status-circle unread"></span>
+                    </div>
+                </div>
+
+                <div class="notif-item">
+                    <div class="icon-wrapper bg-purple">
+                        <i class="fa-solid fa-bullhorn"></i>
+                    </div>
+                    <div class="notif-content">
+                        <h3>Job Post Expiring Soon</h3>
+                        <p>Your job post for <strong>Frontend Developer</strong> will expire in 3 days.</p>
+                    </div>
+                    <div class="notif-meta">
+                        <span class="time">1 day ago</span>
+                        <span class="status-circle unread"></span>
+                    </div>
+                </div>
+
+                <div class="notif-item bg-highlight"> <div class="icon-wrapper bg-green">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <div class="notif-content">
+                        <h3>Profile Update Complete</h3>
+                        <p>Your company profile details have been successfully updated.</p>
+                    </div>
+                    <div class="notif-meta">
+                        <span class="time">3 days ago</span>
+                        <span class="status-circle read">
+                            <div class="inner-dot"></div>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notif-item bg-highlight">
+                    <div class="icon-wrapper bg-blue">
+                        <i class="fa-solid fa-user-plus"></i>
+                    </div>
+                    <div class="notif-content">
+                        <h3>New Application</h3>
+                        <p>You received a new application for the <strong>Product Manager</strong> position.</p>
+                    </div>
+                    <div class="notif-meta">
+                        <span class="time">5 days ago</span>
+                        <span class="status-circle read">
+                            <div class="inner-dot"></div>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notif-item bg-highlight">
+                    <div class="icon-wrapper bg-red">
+                        <i class="fa-solid fa-credit-card"></i> <div class="slash-line"></div> </div>
+                    <div class="notif-content">
+                        <h3>Payment Failed</h3>
+                        <p>Your monthly subscription payment failed. Please update your payment method.</p>
+                    </div>
+                    <div class="notif-meta">
+                        <span class="time">1 week ago</span>
+                        <span class="status-circle read">
+                            <div class="inner-dot"></div>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
