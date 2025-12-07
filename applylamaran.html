@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lamar Pekerjaan</title>
+    <link rel="stylesheet" href="apply.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="form-wrapper">
+
+        <form>
+
+            <h2 style="margin-bottom: 20px; padding-bottom: 20px ;">Form Pengajuan Lamaran</h2>
+
+
+            <div class="form-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+
+
+                <div>
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" id="nama" placeholder="Masukkan nama lengkap">
+                </div>
+
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Email aktif">
+                </div>
+
+                <div>
+                    <label for="nohp">Nomor Telepon</label>
+                    <input type="tel" id="nohp" placeholder="Contoh: 081234567890">
+                </div>
+
+                <div>
+                    <label for="lokasi">Lokasi</label>
+                    <input type="text" id="lokasi" placeholder="Kota / Provinsi">
+                </div>
+            </div>
+
+            <div style="margin-top: 25px;">
+                <label for="about">Tentang Saya</label>
+                <textarea id="about" rows="4" placeholder="Ceritakan pengalaman dan kemampuanmu..."></textarea>
+            </div>
+
+            <div style="margin-top: 25px;">
+                <label>Upload CV / Resume</label>
+                <label class="file-label">
+                    <span id="fileText">Belum ada file</span>
+                </label>
+                <input type="file" id="cv" onchange="document.getElementById('fileText').innerText = this.files[0]?.name || 'Belum ada file';" style="margin-top: 8px;">
+            </div>
+
+            <!-- Skills -->
+            <div style="margin-top: 25px;">
+                <label for="skillInput">Keahlian</label>
+                <input type="text" id="skillInput" placeholder="Contoh: HTML, UI/UX, Excel">
+
+                <div class="skills-container" id="skillList"></div>
+            </div>
+
+            <div class="buttons">
+                <button type="submit" class="submitBtn">Kirim Lamaran</button>
+                <button type="button" class="cancelBtn" onclick="window.history.back()">Batal</button>
+            </div>
+
+        </form>
+
+    </div>
+</div>
+
+<script>
+function addSkill(){
+    let input = document.getElementById("skillInput");
+    let list = document.getElementById("skillList");
+
+    if(input.value.trim() !== ""){
+        let tag = document.createElement("div");
+        tag.className = "skill-tag";
+        tag.innerText = input.value;
+        list.appendChild(tag);
+        input.value = "";
+    }
+}
+</script>
+
+</body>
+</html>

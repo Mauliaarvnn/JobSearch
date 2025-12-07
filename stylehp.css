@@ -12,7 +12,7 @@
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  background: var(--bg);
+  background: #1e3c72;
   color: var(--text);
 }
 
@@ -20,7 +20,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--white);
+  background: #fff;
   padding: 14px 40px;
   border-bottom: 1px solid #ddd;
   position: sticky;
@@ -54,6 +54,8 @@ body {
 .navbar .logo{
   color: #011C40;
 }
+
+ 
 
 .navbar nav a {
   margin-left: 25px;
@@ -180,16 +182,14 @@ body {
   color: var(--primary);
 }
 
-/* --- Tambahan CSS Supaya Menu & Share Jalan --- */
+.job-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
 
-    .job-header {
-      position: relative;
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-
-    .job-actions-top {
+   .job-actions-top {
       position: absolute;
       right: 10px;
       top: 10px;
@@ -204,7 +204,6 @@ body {
       color: #000;
     }
 
-    /* Dropdown menu */
     .dropdown-menu {
       position: absolute;
       top: 35px;
@@ -230,6 +229,24 @@ body {
     .dropdown-menu p:hover {
       background: #f3f3f3;
     }
+
+.job-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+.job-info span {
+  background: #eef6ff;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #0a84ff;
+}
+
 
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(-5px); }
