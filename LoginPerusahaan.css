@@ -1,15 +1,25 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; 
+}
+
 body {
-    font-family: poppins;
+    font-family: 'Poppins', Arial, sans-serif;
     display: flex;
     justify-content: center;
+    align-items: center; /*untuk center vertikal*/
     background: linear-gradient(to bottom right, #022241, #314B64);
+    min-height: 100vh; /*body minimal setinggi viewport */
 }
 
 .card-login {
-    margin-top: 50px;
+    margin: 50px 0; /* Ubah dari margin-top */
     border-radius: 10px;
     padding: 50px;
     background-color: #FFFFFF;
+    max-width: 450px; /* batasi lebar card */
+    width: 90%; /* responsive */
 }
 
 .comlog {
