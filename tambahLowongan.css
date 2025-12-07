@@ -3,6 +3,20 @@
     font-family: 'Poppins';
     src: url('assets/Font/Poppins-Regular.ttf') format('truetype');
 }
+/* Container Logo Kiri BARU */
+.MentokKiri {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+}
+
+/* Gambar Logo */
+.MentokKiri .logo {
+    width: 32px;
+    height: auto;
+}
+
+
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -14,7 +28,7 @@ body {
 
 /* ========== NAVBAR ========== */
 nav {
-    background-color: #A7EBF3;
+    background-color: #ffffff;
     color: #011C40;
     padding: 15px 30px;
     display: flex;
@@ -24,16 +38,16 @@ nav {
 }
 
 nav h2 {
-    font-size: 26px;
-    margin: 0;
-    font-weight: 600;
-    color: #011C40;
+    color: #011C40; /* Warna teks 'In' (biru tua) */
+    font-weight: 700;
 }
 
 /* Efek warna "In" */
-nav h2 span {
-    color: #0284C7;
-    font-weight: 700;
+nav h3 {
+    font-size: 26px;
+    margin: 0;
+    font-weight: 600;
+    color: #0284C7; /* Warna teks 'Loker' (biru muda) */
 }
 
 /* Menu kanan navbar */
