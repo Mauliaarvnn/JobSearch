@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LokerIn - Profil Perusahaan</title>
+    <link rel="stylesheet" href="profilePerusahaan.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="nav-left">LokerIn</div>
+    <div class="nav-right">
+        <a href="homeperusahaan.html">Beranda</a>
+        <a href="#">Notifikasi</a>
+        <a href="#" class="active">Profil</a>
+    </div>
+</nav>
+
+<div class="container">
+
+    <!-- COMPANY HEADER -->
+    <div class="company-header">
+        <div class="company-info">
+            <img src="assets/company-logo.png" class="company-logo" alt="Company Logo">
+
+            <div>
+                <h2>TechFlow Inc.</h2>
+                <p class="subtitle">Enterprise Software Solutions</p>
+                <p class="member">👤 Member since Jan 2023</p>
+            </div>
+        </div>
+
+        <button class="preview-btn">👁 Preview Public Profile</button>
+    </div>
+
+    <!-- STATS CARDS -->
+    <div class="stats-grid">
+        <div class="card stat-card">
+            <p class="label">ACTIVE JOBS</p>
+            <h1>12</h1>
+            <span class="positive">⬆ +25%</span>
+        </div>
+
+        <div class="card stat-card">
+            <p class="label">PROFILE VIEWS</p>
+            <h1>1,254</h1>
+            <span class="positive">⬆ +15%</span>
+        </div>
+
+        <div class="card stat-card">
+            <p class="label">NEW APPLICATIONS</p>
+            <h1>32</h1>
+            <span class="positive">⬆ +5%</span>
+        </div>
+    </div>
+
+    <!-- JOB POSTING MANAGEMENT -->
+    <div class="card">
+        <div class="card-header">
+            <h3>Job Postings Management</h3>
+            <button class="create-btn">＋ Create New Job Posting</button>
+        </div>
+
+        <table class="job-table">
+            <thead>
+                <tr>
+                    <th>JOB TITLE</th>
+                    <th>STATUS</th>
+                    <th>APPLICATIONS</th>
+                    <th>ACTIONS</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>
+                        <strong>Senior UX Designer</strong>
+                        <div class="small">Remote • Full-time</div>
+                    </td>
+                    <td><span class="status active">Active</span></td>
+                    <td>14</td>
+                    <td class="actions">✏️ 👥 📄</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <strong>Frontend Developer</strong>
+                        <div class="small">San Francisco • Hybrid</div>
+                    </td>
+                    <td><span class="status active">Active</span></td>
+                    <td>8</td>
+                    <td class="actions">✏️ 👥 📄</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <strong>Product Manager</strong>
+                        <div class="small">Remote • Full-time</div>
+                    </td>
+                    <td><span class="status inactive">Inactive</span></td>
+                    <td>42</td>
+                    <td class="actions">✏️ 👥 📄</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <strong>DevOps Engineer</strong>
+                        <div class="small">New York • On-site</div>
+                    </td>
+                    <td><span class="status inactive">Inactive</span></td>
+                    <td>25</td>
+                    <td class="actions">✏️ 👥 📄</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- COMPANY DETAILS -->
+    <div class="card">
+        <h3>Company Details</h3>
+
+        <div class="detail-row">
+            <label>Company Name</label>
+            <input type="text" value="TechFlow Inc." readonly>
+        </div>
+
+        <div class="detail-row">
+            <label>Industry</label>
+            <input type="text" value="Enterprise Software Solutions" readonly>
+        </div>
+
+        <div class="detail-row">
+            <label>Location</label>
+            <input type="text" value="San Francisco, USA" readonly>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

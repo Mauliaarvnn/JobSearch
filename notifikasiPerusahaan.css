@@ -1,0 +1,267 @@
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f6f8; /* Warna background abu-abu muda */
+    color: #333;
+}
+
+/* --- Navbar Styling --- */
+.navbar {
+    background-color: white;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    padding: 0 20px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #007bff;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 18px 0; /* Padding vertikal agar border bottom pas */
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-links li a:hover {
+    color: #333;
+}
+
+.nav-links li a.active {
+    color: #333;
+    font-weight: 600;
+    border-bottom: 2px solid #007bff; /* Garis biru di bawah menu aktif */
+}
+
+/* --- Main Container --- */
+.main-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.notification-card {
+    background: white;
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    overflow: hidden; /* Agar sudut rounded tetap terlihat */
+}
+
+/* --- Card Header --- */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.card-header h2 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-mark {
+    background-color: #f0f2f5;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    color: #555;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-mark:hover {
+    background-color: #e4e6e9;
+}
+
+.settings-icon {
+    color: #666;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* --- Notification Items --- */
+.notification-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.notif-item {
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+    border-bottom: 1px solid #f5f5f5;
+    transition: background-color 0.2s;
+}
+
+.notif-item:last-child {
+    border-bottom: none;
+}
+
+.notif-item:hover {
+    background-color: #fafafa;
+}
+
+/* Khusus item yang sudah dibaca (Read) di gambar terlihat ada tint biru muda tipis */
+.notif-item.bg-highlight {
+    background-color: #f9fbfc;
+}
+
+/* Icon Wrapper */
+.icon-wrapper {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-right: 20px;
+    font-size: 18px;
+    position: relative;
+}
+
+/* Warna background icon */
+.bg-blue { background-color: #e3efff; color: #007bff; }
+.bg-purple { background-color: #f3e5f5; color: #9c27b0; }
+.bg-green { background-color: #e8f5e9; color: #4caf50; }
+.bg-red { background-color: #ffebee; color: #f44336; }
+
+/* Hack visual untuk icon slash di kartu merah */
+.bg-red .fa-credit-card {
+    position: relative;
+    z-index: 1;
+}
+.bg-red::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 20px;
+    background-color: #f44336;
+    transform: rotate(45deg);
+    z-index: 2;
+    border: 1px solid #ffebee;
+}
+
+/* Konten Teks */
+.notif-content {
+    flex-grow: 1;
+}
+
+.notif-content h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #222;
+}
+
+.notif-content p {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.4;
+}
+
+.notif-content p strong {
+    color: #333;
+    font-weight: 600;
+}
+
+/* Meta Info (Waktu & Status) */
+.notif-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 20px;
+    min-width: 120px; /* Menjaga agar waktu tidak geser */
+    justify-content: flex-end;
+}
+
+.time {
+    font-size: 12px;
+    color: #999;
+    white-space: nowrap;
+}
+
+/* Status Circle (Bulatan di kanan) */
+.status-circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+/* Status Belum Dibaca (Lingkaran kosong) */
+.status-circle.unread {
+    border: 2px solid #cbd5e1;
+    background-color: transparent;
+}
+
+/* Status Sudah Dibaca/Selected (Lingkaran biru isi putih) */
+.status-circle.read {
+    background-color: #007bff;
+    border: 2px solid #007bff; /* Agar ukurannya sama */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.status-circle.read .inner-dot {
+    width: 6px;
+    height: 6px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+/* Responsif untuk Mobile */
+@media (max-width: 768px) {
+    .notif-item {
+        flex-wrap: wrap;
+    }
+    .notif-meta {
+        width: 100%;
+        justify-content: flex-start;
+        margin-left: 65px; /* Margin icon + gap */
+        margin-top: 10px;
+    }
+}

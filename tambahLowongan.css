@@ -14,8 +14,8 @@ body {
 
 /* ========== NAVBAR ========== */
 nav {
-    background-color: #022044;
-    color: white;
+    background-color: #A7EBF3;
+    color: #011C40;
     padding: 15px 30px;
     display: flex;
     justify-content: space-between;
@@ -27,13 +27,12 @@ nav h2 {
     font-size: 26px;
     margin: 0;
     font-weight: 600;
+    color: #011C40;
 }
 
 /* Efek warna "In" */
-nav .judul-in {
-    background: linear-gradient(135deg, #56C3E7, #8EE8FF);
-    -webkit-background-clip: text;
-    color: transparent;
+nav h2 span {
+    color: #0284C7;
     font-weight: 700;
 }
 
@@ -216,8 +215,8 @@ textarea:focus {
 }
 
 .submitbuttonnewloker {
-    background: #0284C7;
-    color: white;
+    background: #A7EBF3;
+    color: #011C40;
 }
 
 .resetbuttonloker {
