@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Saya</title>
+    <link rel="stylesheet" href="profil.css"> 
+</head>
+<body>
+    <div class="container">
+        <div class="form-wrapper">
+            <h1 class="title">Profil Saya</h1>
+            <p class="subtitle">Informasi pribadi yang Anda simpan</p>
+
+            <!-- Foto -->
+            <div style="text-align: center; margin-bottom: 30px;">
+                <img id="profileImage" src="assets/image/jude.jpg" 
+                     alt="Foto Profil" style="width:120px;height:120px;border-radius:50%;object-fit:cover;">
+            </div>
+
+            <div class="profile-grid">
+                <div class="profile-item">
+                    <h4>Nama Lengkap</h4>
+                    <p id="profilNama">Jude Bellingham</p>
+                </div>
+
+                <div class="profile-item">
+                    <h4>Tanggal Lahir</h4>
+                    <p id="profilTanggal">29 Juni 2003</p>
+                </div>
+
+                <div class="profile-item">
+                    <h4>Jenis Kelamin</h4>
+                    <p id="profilGender">Laki-Laki</p>
+                </div>
+
+                <div class="profile-item">
+                    <h4>Email</h4>
+                    <p id="profilEmail">jude295beli@gmail.com</p>
+                </div>
+
+                <div class="profile-item">
+                    <h4>No WhatsApp</h4>
+                    <p id="profilWA">0822 8705 6777</p>
+                </div>
+
+                <div class="profile-item">
+                    <h4>Pendidikan</h4>
+                    <p id="profilPendidikan">D-3 Teknik Informatika</p>
+                </div>
+
+                <div class="profile-item full-width">
+                    <h4>Alamat</h4>
+                    <p id="profilAlamat">Pekanbaru, Riau</p>
+                </div>
+
+                <div class="profile-item full-width">
+                    <h4>Keahlian</h4>
+                    <div id="profilSkill" style="display:flex; gap:8px; flex-wrap:wrap;"></div>
+                </div>
+
+                <div class="profile-item full-width">
+                    <h4>Pengalaman Kerja</h4>
+                    <p id="profilPengalaman">-</p>
+                </div>
+
+                <div class="profile-item full-width">
+                    <h4>Deskripsi Singkat</h4>
+                    <p id="profilDeskripsi">Saya tertarik dalam bidang UI/UX</p>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <a href="profilpelamar.html">
+                    <button class="btn btn-primary">Edit Profil</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+<script>
+    // Load data dari localStorage kalau ada
+    const data = localStorage.getItem("profilUser");
+    if (data) {
+        const profil = JSON.parse(data);
+
+        document.getElementById("profilNama").textContent = profil.nama || "-";
+        document.getElementById("profilTanggal").textContent = profil.tanggalLahir || "-";
+        document.getElementById("profilGender").textContent = profil.jenisKelamin || "-";
+        document.getElementById("profilEmail").textContent = profil.email || "-";
+        document.getElementById("profilWA").textContent = profil.whatsapp || "-";
+        document.getElementById("profilPendidikan").textContent = profil.pendidikan || "-";
+        document.getElementById("profilAlamat").textContent = profil.alamat || "-";
+        document.getElementById("profilPengalaman").textContent = profil.pengalaman || "-";
+        document.getElementById("profilDeskripsi").textContent = profil.deskripsi || "-";
+
+        // Foto
+        if (profil.fotoProfil) {
+            document.getElementById("profileImage").src = profil.fotoProfil;
+        }
+
+        // Skill list
+        if (profil.skills && profil.skills.length) {
+            profil.skills.forEach(skill => {
+                let span = document.createElement("span");
+                span.textContent = skill;
+                span.style.background = "#e0f2fe";
+                span.style.color = "#0369a1";
+                span.style.padding = "6px 12px";
+                span.style.borderRadius = "20px";
+                document.getElementById("profilSkill").appendChild(span);
+            });
+        }
+    }
+</script>
+
+</body>
+</html>
