@@ -48,6 +48,33 @@
                                 </svg>
                             </button>
                         </div>
+                        
+                        <!-- Calendar Dropdown -->
+                        <div class="calendar-dropdown" id="calendarDropdown">
+                            <div class="calendar-header">
+                                <button type="button" class="calendar-nav" id="prevMonth">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="15 18 9 12 15 6"/>
+                                    </svg>
+                                </button>
+                                <div class="calendar-title" id="calendarTitle">Januari 2024</div>
+                                <button type="button" class="calendar-nav" id="nextMonth">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="9 18 15 12 9 6"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="calendar-weekdays">
+                                <div>Min</div>
+                                <div>Sen</div>
+                                <div>Sel</div>
+                                <div>Rab</div>
+                                <div>Kam</div>
+                                <div>Jum</div>
+                                <div>Sab</div>
+                            </div>
+                            <div class="calendar-days" id="calendarDays"></div>
+                        </div>
                     </div>
 
                     <!-- Jenis Kelamin -->
@@ -208,40 +235,9 @@
                 <div class="button-group">
                     <button type="submit" class="btn btn-primary">Simpan Profil</button>
                     <button type="reset" class="btn btn-secondary">Batal</button>
+                    
                 </div>
             </form>
-        </div>
-    </div>
-
-    <!-- Calendar Overlay -->
-    <div class="calendar-overlay" id="calendarOverlay">
-        <div class="calendar-modal">
-            <div class="calendar-header">
-                <button type="button" class="calendar-nav" id="prevMonth">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="15 18 9 12 15 6"/>
-                    </svg>
-                </button>
-                <div class="calendar-title" id="calendarTitle">Januari 2024</div>
-                <button type="button" class="calendar-nav" id="nextMonth">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="9 18 15 12 9 6"/>
-                    </svg>
-                </button>
-            </div>
-            <div class="calendar-weekdays">
-                <div>Min</div>
-                <div>Sen</div>
-                <div>Sel</div>
-                <div>Rab</div>
-                <div>Kam</div>
-                <div>Jum</div>
-                <div>Sab</div>
-            </div>
-            <div class="calendar-days" id="calendarDays"></div>
-            <div class="calendar-footer">
-                <button type="button" class="btn btn-secondary btn-sm" id="closeCalendar">Tutup</button>
-            </div>
         </div>
     </div>
 
