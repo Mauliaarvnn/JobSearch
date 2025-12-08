@@ -1,8 +1,22 @@
 /* ========== Font ========== */
 @font-face {
-    font-family: 'Poppins';
+    font-family: "Inter", sans-serif;
     src: url('assets/Font/Poppins-Regular.ttf') format('truetype');
 }
+/* Container Logo Kiri BARU */
+.MentokKiri {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+}
+
+/* Gambar Logo */
+.MentokKiri .logo {
+    width: 32px;
+    height: auto;
+}
+
+
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -14,7 +28,7 @@ body {
 
 /* ========== NAVBAR ========== */
 nav {
-    background-color: #A7EBF3;
+    background-color: #ffffff;
     color: #011C40;
     padding: 15px 30px;
     display: flex;
@@ -23,17 +37,17 @@ nav {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-nav h2 {
-    font-size: 26px;
-    margin: 0;
-    font-weight: 600;
-    color: #011C40;
+nav h3 span {
+    color: #0284C7; /* Warna teks 'In' (biru tua) */
+    font-weight: 700;
 }
 
 /* Efek warna "In" */
-nav h2 span {
-    color: #0284C7;
-    font-weight: 700;
+nav h3 {
+    font-size: 26px;
+    margin: 0;
+    font-weight: 600;
+    color: #011C40; /* Warna teks 'Loker' (biru muda) */
 }
 
 /* Menu kanan navbar */
@@ -49,6 +63,19 @@ nav h2 span {
     opacity: 0.8;
     transition: 0.2s;
 }
+
+.navKanan a {
+    text-decoration: none;   /* Hilangkan underline */
+    color: white;            /* Warna font putih */
+    opacity: 0.85;           /* Biar sama kayak efek <p> tadi */
+    transition: 0.25s;
+}
+
+.navKanan a:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
 
 .navKanan p:hover {
     opacity: 1;
@@ -225,7 +252,7 @@ textarea:focus {
 }
 
 .cancelbuttonloker {
-    background: #64748B;
+    background: #B91C1C;
     color: white;
 }
 
