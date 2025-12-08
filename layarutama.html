@@ -8,73 +8,82 @@
 </head>
 <body>
   <header class="header">
-  <div class="logo-container">
-    <img src="assets/image/logo_lokerin.png" alt="logo_lokerin">
-    <h1 class="logo">Loker<span class="in">In</span></h1>
-  </div>
+    <div class="logo-container">
+      <img src="assets/image/logo_lokerin.png" alt="logo_lokerin">
+      <h1 class="logo">Loker<span class="in">In</span></h1>
+    </div>
 
-  <nav class="nav">
-    <!-- DROPDOWN MASUK -->
-    <div class="dropdown">
-      <input type="checkbox" id="toggleDropdown">
-      <label for="toggleDropdown" class="btn btn--nav">Masuk</label>
+    <nav class="nav">
+      <!-- DROPDOWN MASUK -->
+      <div class="dropdown">
+        <input type="checkbox" id="toggleDropdown">
+        <label for="toggleDropdown" class="btn btn--nav">Masuk</label>
 
-      <div class="dropdown-menu">
-        <a href="logi_pelamar.html">Masuk sebagai Profesional</a>
-        <a href="LoginPerusahaan.html">Masuk sebagai Perusahaan</a>
+        <div class="dropdown-menu">
+          <a href="logi_pelamar.html">Masuk sebagai Profesional</a>
+          <a href="LoginPerusahaan.html">Masuk sebagai Perusahaan</a>
+        </div>
+      </div>
+
+      <!-- DROPDOWN DAFTAR GRATIS -->
+      <div class="dropdown">
+        <input type="checkbox" id="toggleDaftar">
+        <label for="toggleDaftar" class="btn btn--nav btn--daftar">Daftar Gratis</label>
+
+        <div class="dropdown-menu">
+          <a href="registerpelamar.html">Daftar sebagai Profesional</a>
+          <a href="registerperusahaan.html">Daftar sebagai Perusahaan</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero__content">
+      <h2 class="hero__title">
+        Selamat Datang di <span class="text--accent">LokerIn</span>
+      </h2>
+      <p class="hero__desc">
+        Platform jaringan profesional terbesar di Indonesia yang membantu
+        individu dan perusahaan saling terhubung, berkolaborasi, dan tumbuh bersama.
+      </p>
+
+      <div class="hero__cta">
+        <a href="registerpelamar.html" class="btn btn--primary">Daftar sebagai Profesional</a>
+        <a href="registerperusahaan.html" class="btn btn--secondary">Daftar sebagai Perusahaan</a>
       </div>
     </div>
+  </section>
 
-    <a href="daftar.html" class="btn btn--nav btn--daftar">Daftar Gratis</a>
-  </nav>
-</header>
+  <section class="features">
+    <h3 class="features__title">Kenapa Memilih LokerIn?</h3>
 
-<section class="hero">
-  <div class="hero__content">
-    <h2 class="hero__title">
-      Selamat Datang di <span class="text--accent">LokerIn</span>
-    </h2>
-    <p class="hero__desc">
-      Platform jaringan profesional terbesar di Indonesia yang membantu
-      individu dan perusahaan saling terhubung, berkolaborasi, dan tumbuh bersama.
-    </p>
+    <div class="features__grid">
+      <article class="card">
+        <div class="card__icon">🌐</div>
+        <h4 class="card__title">Jaringan Profesional</h4>
+        <p class="card__text">Bangun koneksi dengan ribuan profesional di berbagai bidang.</p>
+      </article>
 
-    <div class="hero__cta">
-      <button class="btn btn--primary">Daftar sebagai Profesional</button>
-      <button class="btn btn--secondary">Daftar sebagai Perusahaan</button>
+      <article class="card">
+        <div class="card__icon">💼</div>
+        <h4 class="card__title">Peluang Karir</h4>
+        <p class="card__text">Temukan peluang kerja terbaik sesuai keahlianmu.</p>
+      </article>
+
+      <article class="card">
+        <div class="card__icon">🎓</div>
+        <h4 class="card__title">Kembangkan Skill</h4>
+        <p class="card__text">Ikuti pelatihan dan webinar eksklusif untuk peningkatan karier.</p>
+      </article>
+
+      <article class="card">
+        <div class="card__icon">🏆</div>
+        <h4 class="card__title">Portofolio & Prestasi</h4>
+        <p class="card__text">Tunjukkan pengalaman dan pencapaian terbaikmu.</p>
+      </article>
     </div>
-  </div>
-</section>
-
-<section class="features">
-  <h3 class="features__title">Kenapa Memilih LokerIn?</h3>
-
-  <div class="features__grid">
-    <article class="card">
-      <div class="card__icon">🌐</div>
-      <h4 class="card__title">Jaringan Profesional</h4>
-      <p class="card__text">Bangun koneksi dengan ribuan profesional di berbagai bidang.</p>
-    </article>
-
-    <article class="card">
-      <div class="card__icon">💼</div>
-      <h4 class="card__title">Peluang Karir</h4>
-      <p class="card__text">Temukan peluang kerja terbaik sesuai keahlianmu.</p>
-    </article>
-
-    <article class="card">
-      <div class="card__icon">🎓</div>
-      <h4 class="card__title">Kembangkan Skill</h4>
-      <p class="card__text">Ikuti pelatihan dan webinar eksklusif untuk peningkatan karier.</p>
-    </article>
-
-    <article class="card">
-      <div class="card__icon">🏆</div>
-      <h4 class="card__title">Portofolio & Prestasi</h4>
-      <p class="card__text">Tunjukkan pengalaman dan pencapaian terbaikmu.</p>
-    </article>
-  </div>
-</section>
+  </section>
 
 </body>
 </html>
