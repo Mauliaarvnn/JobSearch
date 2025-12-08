@@ -1,4 +1,3 @@
-
 // Calendar Variables
 let currentDate = new Date();
 let selectedDate = null;
@@ -19,7 +18,6 @@ const months = [
 ];
 
 // ===== CALENDAR FUNCTIONS =====
-
 
 function renderCalendar() {
     const year = currentDate.getFullYear();
@@ -61,7 +59,6 @@ function renderCalendar() {
             day.classList.add('selected');
         }
         
-
         day.addEventListener('click', () => selectDate(year, month, i));
         calendarDays.appendChild(day);
     }
@@ -86,8 +83,6 @@ function selectDate(year, month, day) {
     calendarDropdown.classList.remove('active');
 }
 
-
-
 calendarBtn.addEventListener('click', (e) => {
     e.stopPropagation(); 
     calendarDropdown.classList.toggle('active');
@@ -98,7 +93,6 @@ calendarBtn.addEventListener('click', (e) => {
 });
 
 document.addEventListener('click', (e) => {
-    
     if (!calendarDropdown.contains(e.target) && e.target !== calendarBtn) {
         calendarDropdown.classList.remove('active');
     }
@@ -114,6 +108,7 @@ nextMonth.addEventListener('click', () => {
     renderCalendar();
 });
 
+// ===== SKILLS MANAGEMENT =====
 
 const skillInput = document.getElementById('skill');
 const skillsContainer = document.getElementById('skillsContainer');
@@ -125,7 +120,6 @@ skillInput.addEventListener('keypress', (e) => {
         
         const skillText = skillInput.value.trim();
         
-        
         if (skillText && !skills.includes(skillText)) {
             skills.push(skillText); 
             addSkillTag(skillText); 
@@ -133,7 +127,6 @@ skillInput.addEventListener('keypress', (e) => {
         }
     }
 });
-
 
 function addSkillTag(skill) {
     const tag = document.createElement('div');
@@ -146,7 +139,6 @@ function addSkillTag(skill) {
 }
 
 function removeSkill(button, skill) {
-
     const index = skills.indexOf(skill);
     if (index > -1) {
         skills.splice(index, 1);
@@ -155,25 +147,24 @@ function removeSkill(button, skill) {
     button.parentElement.remove();
 }
 
+// ===== FILE UPLOAD HANDLERS =====
 
 const fotoProfilInput = document.getElementById('fotoProfil');
 const cvInput = document.getElementById('cv');
-
 
 fotoProfilInput.addEventListener('change', (e) => {
     const fileName = e.target.files[0] ? e.target.files[0].name : 'No file chosen';
     e.target.nextElementSibling.querySelector('.file-name').textContent = fileName;
 });
 
-
 cvInput.addEventListener('change', (e) => {
     const fileName = e.target.files[0] ? e.target.files[0].name : 'No file chosen';
     e.target.nextElementSibling.querySelector('.file-name').textContent = fileName;
 });
 
+// ===== FORM SUBMISSION =====
 
 const profilForm = document.getElementById('profilForm');
-
 
 profilForm.addEventListener('submit', (e) => {
     e.preventDefault(); 
@@ -193,23 +184,24 @@ profilForm.addEventListener('submit', (e) => {
     
     console.log('Form Data:', formData);
     
+    // Tampilkan alert dan redirect setelah user klik OK
     alert('Profil berhasil disimpan! Data telah dikirim.');
     
-    
+    // Redirect ke profil.html setelah alert ditutup
+    window.location.href = 'profil.html';
 });
 
-
 profilForm.addEventListener('reset', () => {
-    
+    // Hapus semua skills
     skills.length = 0;
     skillsContainer.innerHTML = '';
     
-    
+    // Reset tanggal lahir
     selectedDate = null;
     tanggalLahirInput.value = '';
     
-    
+    // Reset file names
     document.querySelectorAll('.file-name').forEach(el => {
         el.textContent = 'No file chosen';
     });
-});
+});y
