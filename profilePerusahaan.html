@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LokerIn - Profil Perusahaan</title>
+    <link rel="stylesheet" href="profilePerusahaan.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/image/logo_lokerin.png" alt="logo_lokerin">
+                Loker<span class="in">In</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="homeperusahaan.html">Beranda</a></li>
+                <li><a href="notifikasiPerusahaan.html">Notifikasi</a></li>
+                <li><a href="#" class="active">Profil</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<div class="container">
+
+    <!-- COMPANY HEADER -->
+    <div class="company-header">
+        <div class="company-info">
+            <img src="assets/image/MobileApp.jpg" class="company-logo" alt="Company Logo">
+
+            <div>
+                <h2>PT. Yales Ultima Karya</h2>
+                <p class="subtitle">Enterprise Software Solutions</p>
+                <p class="member">👤 Member since Jan 2019</p>
+            </div>
+        </div>
+
+        <button class="preview-btn">👁 Preview Public Profile</button>
+    </div>
+
+    <!-- STATS CARDS -->
+    <div class="stats-grid">
+        <div class="card stat-card">
+            <p class="label">ACTIVE JOBS</p>
+            <h1>12</h1>
+            <span class="positive">⬆ +25%</span>
+        </div>
+
+        <div class="card stat-card">
+            <p class="label">PROFILE VIEWS</p>
+            <h1>1,254</h1>
+            <span class="positive">⬆ +15%</span>
+        </div>
+
+        <div class="card stat-card">
+            <p class="label">NEW APPLICATIONS</p>
+            <h1>32</h1>
+            <span class="positive">⬆ +5%</span>
+        </div>
+    </div>
+
+    <!-- JOB POSTING MANAGEMENT -->
+    <div class="card">
+        <div class="card-header">
+            <h3>Job Postings Management</h3>
+            <button class="create-btn">＋ Create New Job Posting</button>
+        </div>
+
+        <table class="job-table">
+            <thead>
+                <tr>
+                    <th>JOB TITLE</th>
+                    <th>STATUS</th>
+                    <th>APPLICATIONS</th>
+                    <th>ACTIONS</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>
+                        <strong>Software Engineer</strong>
+                        <div class="small">Penuh Waktu</div>
+                    </td>
+                    <td><span class="status active">Active</span></td>
+                    <td>14</td>
+                    <td class="actions">✏️ 👥 📄</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <strong>Digital Marketing Specialist</strong>
+                        <div class="small">Paruh Waktu</div>
+                    </td>
+                    <td><span class="status active">Active</span></td>
+                    <td>8</td>
+                    <td class="actions">✏️ 👥 📄</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <strong>UI/UX Designer</strong>
+                        <div class="small">Kontrak</div>
+                    </td>
+                    <td><span class="status inactive">Inactive</span></td>
+                    <td>42</td>
+                    <td class="actions">✏️ 👥 📄</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <strong>DevOps Engineer</strong>
+                        <div class="small">New York • On-site</div>
+                    </td>
+                    <td><span class="status inactive">Inactive</span></td>
+                    <td>25</td>
+                    <td class="actions">✏️ 👥 📄</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- COMPANY DETAILS -->
+    <div class="card">
+        <h3>Company Details</h3>
+
+        <div class="detail-row">
+            <label>Company Name</label>
+            <input type="text" value="PT. Yales Ultima Karya" readonly>
+        </div>
+
+        <div class="detail-row">
+            <label>Industry</label>
+            <input type="text" value="Enterprise Software Solutions" readonly>
+        </div>
+
+        <div class="detail-row">
+            <label>Location</label>
+            <input type="text" value="Jakarta" readonly>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

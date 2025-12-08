@@ -12,7 +12,7 @@
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  background: var(--bg);
+  background: #1e3c72;
   color: var(--text);
 }
 
@@ -20,7 +20,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--white);
+  background: #fff;
   padding: 14px 40px;
   border-bottom: 1px solid #ddd;
   position: sticky;
@@ -34,6 +34,19 @@ body {
   color: var(--primary);
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 25px;     
+  height: 25px;
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+
 .in {
   color: #A7EBF3;
 }
@@ -41,6 +54,8 @@ body {
 .navbar .logo{
   color: #011C40;
 }
+
+ 
 
 .navbar nav a {
   margin-left: 25px;
@@ -93,6 +108,21 @@ body {
 .list-section h2 {
   margin-bottom: 20px;
 }
+
+.job-logo {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50%; /* bikin bulat */
+  margin-right: 15px;
+}
+
+.job-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 
 .job-card {
   background: var(--white);
@@ -151,3 +181,74 @@ body {
   cursor: pointer;
   color: var(--primary);
 }
+
+.job-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+   .job-actions-top {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      display: flex;
+      gap: 12px;
+      font-size: 20px;
+      cursor: pointer;
+      color: #555;
+    }
+
+    .job-actions-top span:hover {
+      color: #000;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 35px;
+      right: 0;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      width: 160px;
+      display: none;
+      flex-direction: column;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      animation: fadeIn .2s ease;
+      z-index: 10;
+    }
+
+    .dropdown-menu p {
+      padding: 10px 14px;
+      margin: 0;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .dropdown-menu p:hover {
+      background: #f3f3f3;
+    }
+
+.job-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+.job-info span {
+  background: #eef6ff;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #0a84ff;
+}
+
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }

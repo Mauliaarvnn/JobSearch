@@ -3,23 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="layarutama.css">
   <title>LokerIn - Layar Utama</title>
+  <link rel="stylesheet" href="layarutama.css">
 </head>
 <body>
-
-<header class="header">
-  <h1 class="logo">Loker<span class="in">In</span></h1>
+  <header class="header">
+  <div class="logo-container">
+    <img src="assets/image/logo_lokerin.png" alt="logo_lokerin">
+    <h1 class="logo">Loker<span class="in">In</span></h1>
+  </div>
 
   <nav class="nav">
-
     <!-- DROPDOWN MASUK -->
     <div class="dropdown">
       <input type="checkbox" id="toggleDropdown">
       <label for="toggleDropdown" class="btn btn--nav">Masuk</label>
 
       <div class="dropdown-menu">
-        <a href="login_pro.html">Masuk sebagai Profesional</a>
+        <a href="logi_pelamar.html">Masuk sebagai Profesional</a>
         <a href="LoginPerusahaan.html">Masuk sebagai Perusahaan</a>
       </div>
     </div>
@@ -27,7 +28,6 @@
     <a href="daftar.html" class="btn btn--nav btn--daftar">Daftar Gratis</a>
   </nav>
 </header>
-
 
 <section class="hero">
   <div class="hero__content">
@@ -45,7 +45,6 @@
     </div>
   </div>
 </section>
-
 
 <section class="features">
   <h3 class="features__title">Kenapa Memilih LokerIn?</h3>

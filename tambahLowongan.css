@@ -1,8 +1,22 @@
 /* ========== Font ========== */
 @font-face {
-    font-family: 'Poppins';
+    font-family: "Inter", sans-serif;
     src: url('assets/Font/Poppins-Regular.ttf') format('truetype');
 }
+/* Container Logo Kiri BARU */
+.MentokKiri {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+}
+
+/* Gambar Logo */
+.MentokKiri .logo {
+    width: 32px;
+    height: auto;
+}
+
+
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -14,8 +28,8 @@ body {
 
 /* ========== NAVBAR ========== */
 nav {
-    background-color: #022044;
-    color: white;
+    background-color: #ffffff;
+    color: #011C40;
     padding: 15px 30px;
     display: flex;
     justify-content: space-between;
@@ -23,18 +37,17 @@ nav {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-nav h2 {
-    font-size: 26px;
-    margin: 0;
-    font-weight: 600;
+nav h3 span {
+    color: #0284C7; /* Warna teks 'In' (biru tua) */
+    font-weight: 700;
 }
 
 /* Efek warna "In" */
-nav .judul-in {
-    background: linear-gradient(135deg, #56C3E7, #8EE8FF);
-    -webkit-background-clip: text;
-    color: transparent;
-    font-weight: 700;
+nav h3 {
+    font-size: 26px;
+    margin: 0;
+    font-weight: 600;
+    color: #011C40; /* Warna teks 'Loker' (biru muda) */
 }
 
 /* Menu kanan navbar */
@@ -172,8 +185,6 @@ textarea:focus {
     min-height: calc(100vh - 180px); 
 }
 
-
-
 .jobDescContainer {
     display: flex;
     flex-direction: column;
@@ -218,8 +229,8 @@ textarea:focus {
 }
 
 .submitbuttonnewloker {
-    background: #0284C7;
-    color: white;
+    background: #A7EBF3;
+    color: #011C40;
 }
 
 .resetbuttonloker {
