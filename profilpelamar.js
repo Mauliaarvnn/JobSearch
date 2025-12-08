@@ -1,20 +1,25 @@
-// Calendar functionality
+
+// Calendar Variables
 let currentDate = new Date();
 let selectedDate = null;
 
+// Calendar DOM Elements
 const calendarBtn = document.getElementById('calendarBtn');
-const calendarOverlay = document.getElementById('calendarOverlay');
-const closeCalendar = document.getElementById('closeCalendar');
+const calendarDropdown = document.getElementById('calendarDropdown');
 const prevMonth = document.getElementById('prevMonth');
 const nextMonth = document.getElementById('nextMonth');
 const calendarTitle = document.getElementById('calendarTitle');
 const calendarDays = document.getElementById('calendarDays');
 const tanggalLahirInput = document.getElementById('tanggalLahir');
 
+
 const months = [
     'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni',
     'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'
 ];
+
+// ===== CALENDAR FUNCTIONS =====
+
 
 function renderCalendar() {
     const year = currentDate.getFullYear();
@@ -23,12 +28,13 @@ function renderCalendar() {
     calendarTitle.textContent = `${months[month]} ${year}`;
     
     const firstDay = new Date(year, month, 1).getDay();
+    
     const daysInMonth = new Date(year, month + 1, 0).getDate();
+    
     const daysInPrevMonth = new Date(year, month, 0).getDate();
     
     calendarDays.innerHTML = '';
     
-    // Previous month days
     for (let i = firstDay - 1; i >= 0; i--) {
         const day = document.createElement('div');
         day.className = 'calendar-day other-month';
@@ -36,14 +42,15 @@ function renderCalendar() {
         calendarDays.appendChild(day);
     }
     
-    // Current month days
     for (let i = 1; i <= daysInMonth; i++) {
         const day = document.createElement('div');
         day.className = 'calendar-day';
         day.textContent = i;
         
         const today = new Date();
-        if (year === today.getFullYear() && month === today.getMonth() && i === today.getDate()) {
+        if (year === today.getFullYear() && 
+            month === today.getMonth() && 
+            i === today.getDate()) {
             day.classList.add('today');
         }
         
@@ -54,13 +61,13 @@ function renderCalendar() {
             day.classList.add('selected');
         }
         
+
         day.addEventListener('click', () => selectDate(year, month, i));
         calendarDays.appendChild(day);
     }
     
-    // Next month days
     const totalCells = calendarDays.children.length;
-    const remainingCells = 42 - totalCells; // 6 rows * 7 days
+    const remainingCells = 42 - totalCells; 
     for (let i = 1; i <= remainingCells; i++) {
         const day = document.createElement('div');
         day.className = 'calendar-day other-month';
@@ -71,23 +78,29 @@ function renderCalendar() {
 
 function selectDate(year, month, day) {
     selectedDate = new Date(year, month, day);
+    
     const formattedDate = `${String(day).padStart(2, '0')}/${String(month + 1).padStart(2, '0')}/${year}`;
+    
     tanggalLahirInput.value = formattedDate;
-    calendarOverlay.classList.remove('active');
+    
+    calendarDropdown.classList.remove('active');
 }
 
-calendarBtn.addEventListener('click', () => {
-    calendarOverlay.classList.add('active');
-    renderCalendar();
+
+
+calendarBtn.addEventListener('click', (e) => {
+    e.stopPropagation(); 
+    calendarDropdown.classList.toggle('active');
+    
+    if (calendarDropdown.classList.contains('active')) {
+        renderCalendar();
+    }
 });
 
-closeCalendar.addEventListener('click', () => {
-    calendarOverlay.classList.remove('active');
-});
-
-calendarOverlay.addEventListener('click', (e) => {
-    if (e.target === calendarOverlay) {
-        calendarOverlay.classList.remove('active');
+document.addEventListener('click', (e) => {
+    
+    if (!calendarDropdown.contains(e.target) && e.target !== calendarBtn) {
+        calendarDropdown.classList.remove('active');
     }
 });
 
@@ -101,22 +114,26 @@ nextMonth.addEventListener('click', () => {
     renderCalendar();
 });
 
-// Skills functionality
+
 const skillInput = document.getElementById('skill');
 const skillsContainer = document.getElementById('skillsContainer');
-const skills = [];
+const skills = []; 
 
 skillInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
-        e.preventDefault();
+        e.preventDefault(); 
+        
         const skillText = skillInput.value.trim();
+        
+        
         if (skillText && !skills.includes(skillText)) {
-            skills.push(skillText);
-            addSkillTag(skillText);
-            skillInput.value = '';
+            skills.push(skillText); 
+            addSkillTag(skillText); 
+            skillInput.value = ''; 
         }
     }
 });
+
 
 function addSkillTag(skill) {
     const tag = document.createElement('div');
@@ -129,32 +146,37 @@ function addSkillTag(skill) {
 }
 
 function removeSkill(button, skill) {
+
     const index = skills.indexOf(skill);
     if (index > -1) {
         skills.splice(index, 1);
     }
+    
     button.parentElement.remove();
 }
 
-// File input handling
+
 const fotoProfilInput = document.getElementById('fotoProfil');
 const cvInput = document.getElementById('cv');
+
 
 fotoProfilInput.addEventListener('change', (e) => {
     const fileName = e.target.files[0] ? e.target.files[0].name : 'No file chosen';
     e.target.nextElementSibling.querySelector('.file-name').textContent = fileName;
 });
 
+
 cvInput.addEventListener('change', (e) => {
     const fileName = e.target.files[0] ? e.target.files[0].name : 'No file chosen';
     e.target.nextElementSibling.querySelector('.file-name').textContent = fileName;
 });
 
-// Form submission
+
 const profilForm = document.getElementById('profilForm');
 
+
 profilForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+    e.preventDefault(); 
     
     const formData = {
         nama: document.getElementById('nama').value,
@@ -170,14 +192,23 @@ profilForm.addEventListener('submit', (e) => {
     };
     
     console.log('Form Data:', formData);
+    
     alert('Profil berhasil disimpan! Data telah dikirim.');
+    
+    
 });
 
+
 profilForm.addEventListener('reset', () => {
+    
     skills.length = 0;
     skillsContainer.innerHTML = '';
+    
+    
     selectedDate = null;
     tanggalLahirInput.value = '';
+    
+    
     document.querySelectorAll('.file-name').forEach(el => {
         el.textContent = 'No file chosen';
     });
