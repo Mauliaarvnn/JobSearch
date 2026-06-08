@@ -174,3 +174,36 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+-- ============================================================
+-- Migration: Tambah kolom profil perusahaan ke tabel `users`
+-- Database : portal_kerja
+-- Jalankan di phpMyAdmin atau terminal MySQL
+-- ============================================================
+
+USE `portal_kerja`;
+
+ALTER TABLE `users`
+    -- Informasi dasar perusahaan
+    ADD COLUMN IF NOT EXISTS `nama_perusahaan`   VARCHAR(255)  DEFAULT NULL AFTER `bio`,
+    ADD COLUMN IF NOT EXISTS `industri`          VARCHAR(100)  DEFAULT NULL AFTER `nama_perusahaan`,
+    ADD COLUMN IF NOT EXISTS `ukuran_perusahaan` VARCHAR(50)   DEFAULT NULL AFTER `industri`,
+    ADD COLUMN IF NOT EXISTS `tahun_berdiri`     YEAR          DEFAULT NULL AFTER `ukuran_perusahaan`,
+    ADD COLUMN IF NOT EXISTS `website`           VARCHAR(255)  DEFAULT NULL AFTER `tahun_berdiri`,
+
+    -- Kontak & sosial media
+    ADD COLUMN IF NOT EXISTS `linkedin_perusahaan`  VARCHAR(255) DEFAULT NULL AFTER `website`,
+    ADD COLUMN IF NOT EXISTS `instagram_perusahaan` VARCHAR(255) DEFAULT NULL AFTER `linkedin_perusahaan`,
+    ADD COLUMN IF NOT EXISTS `twitter_perusahaan`   VARCHAR(255) DEFAULT NULL AFTER `instagram_perusahaan`,
+
+    -- Tambahan profil
+    ADD COLUMN IF NOT EXISTS `visi`              TEXT          DEFAULT NULL AFTER `twitter_perusahaan`,
+    ADD COLUMN IF NOT EXISTS `misi`              TEXT          DEFAULT NULL AFTER `visi`,
+    ADD COLUMN IF NOT EXISTS `foto_perusahaan`   VARCHAR(255)  DEFAULT NULL AFTER `misi`,
+    ADD COLUMN IF NOT EXISTS `dokumen_npwp`      VARCHAR(255)  DEFAULT NULL AFTER `foto_perusahaan`,
+    ADD COLUMN IF NOT EXISTS `status_verifikasi` ENUM('belum','pending','terverifikasi') NOT NULL DEFAULT 'belum' AFTER `dokumen_npwp`;
+
+-- ============================================================
+-- Cek hasil (opsional)
+-- ============================================================
+-- DESCRIBE users;
